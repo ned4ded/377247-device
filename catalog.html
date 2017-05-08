@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <title>HTML Academy: Девайс</title>
+  <!-- <link rel="stylesheet" href="css/style.css"> -->
+  <!-- <link rel="stylesheet" href="css/markup-color-border.css"> -->
+</head>
+<body>
+  <header class="container clearfix">
+    <div class="header main-header">
+
+      <b class="logo main-header__logo">
+        Device
+      </b>
+      <h2 class="no-style-explanation-heading">Главное меню</h2>
+      <div class="main-header__menu clearfix">
+
+        <ul class="main-header__toolbar">
+          <li>
+            <form>
+              <input type="search" name="Site-search" placeholder="Поиск по сайту">
+            </form>
+          </li>
+          <li>
+            <p>
+              Валентин Петухов
+            </p>
+            <a href="#">Выйти</a>
+          </li>
+          <li>
+            <a href="#">Сравнить</a>
+          </li>
+          <li>
+            <a href="#">Корзина</a>
+          </li>
+        </ul>
+        <ul class="main-header__nav">
+          <li>
+            <a href="#">Каталог товаров</a>
+            <ul>
+              <li>
+                <a href="#">Виртуальная реальность</a>
+              </li>
+              <li>
+                <a href="#">Фитнес-браслеты</a>
+              </li>
+              <li>
+                <a href="#">Квадрокоптеры</a>
+              </li>
+              <li>
+                <a href="#">Моноподы для селфи</a>
+              </li>
+              <li>
+                <a href="#">Умные часы</a>
+              </li>
+              <li>
+                <a href="#">Экшн-камеры</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">Доставка</a>
+          </li>
+          <li>
+            <a href="#">Гарантия</a>
+          </li>
+          <li>
+            <a href="#">Контакты</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </header>
+  <main class="container clearfix">
+    <div class="page-heading">
+      <h1>Моноподы для селфи</h1>
+      <ul class="page-heading__breadcrumbs">
+        <li>
+          <a href="#">Главная</a>
+        </li>
+        <li>
+          <a href="#">Каталог товаров</a>
+        </li>
+        <li>
+          <a class="page-heading__current-page" href="#">Моноподы для селфи</a>
+        </li>
+      </ul>
+    </div>
+    <form class="filters">
+      <legend class="legend-heading">
+        Фильтры:
+      </legend>
+      <fieldset class="filters__price">
+        <legend>
+          Стоимость
+        </legend>
+        <label>
+          от <input type="text" name="min-price" value="0">
+        </label>
+        <label>
+          до <input type="text" name="max-price" value="5000">
+        </label>
+      </fieldset>
+      <fieldset class="filters__color">
+        <legend>
+          Цвет
+        </legend>
+        <ul>
+          <li>
+            <label>
+              <input type="checkbox" name="color" value="black" checked>
+              Черный
+            </label>
+          </li>
+          <li>
+            <label>
+              <input type="checkbox" name="color" value="white">
+              Белый
+            </label>
+          </li>
+          <li>
+            <label>
+              <input type="checkbox" name="color" value="blue" checked>
+              Синий
+            </label>
+          </li>
+          <li>
+            <label>
+              <input type="checkbox" name="color" value="red" checked>
+              Красный
+            </label>
+          </li>
+          <li>
+            <label>
+              <input type="checkbox" name="color" value="pink">
+              Розовый
+            </label>
+          </li>
+        </ul>
+      </fieldset>
+      <fieldset class="filters__bluetooth">
+        <legend>
+          Bluetooth
+        </legend>
+        <label>
+          <input type="radio" name="bluetooth" value="1" checked> Есть
+        </label>
+        <label>
+          <input type="radio" name="bluetooth" value="0"> Нет
+        </label>
+      </fieldset>
+      <input class="btn" type="submit" name="Submit-filters" value="Показать">
+    </form>
+    <section class="shop-items">
+      <!-- SHOULD I USE FORM FOR SORTING? -->
+        <!-- <form class="shop-items__sort">
+            <legend>
+              Сортировка:
+            </legend>
+          <fieldset class="shop-items__sort-column">
+            <ul>
+            <li>
+              <button type="radio" name="order-by-price" value="1">По цене</button>
+            </li>
+            <li>
+              <button type="radio" name="order-by-type" value="2">По типу</button>
+            </li>
+            <li>
+              <button type="radio" name="order-by-popular" value="3">По популярности</button>
+            </li>
+          </ul>
+          </fieldset>
+          <fieldset class="shop-items__sort-order">
+            <ul>
+              <li>
+                <button type="radio" name="desc-order" value="0">По популярности</button>
+              </li>
+              <li>
+                <button type="radio" name="asc-order" value="1" checked>По популярности</button>
+              </li>
+            </ul>
+          </fieldset>
+        </form> -->
+        <div lass="shop-items__sort">
+          <legend class="legend-heading">
+            Сортировка:
+          </legend>
+          <ul>
+            <li class="shop-items__sort-type checked">
+              По цене
+            </li>
+            <li class="shop-items__sort-type">
+              По типу
+            </li>
+            <li class="shop-items__sort-type">
+              По популярности
+            </li>
+            </ul>
+            <ul>
+            <li class="shop-items__order-type">
+              По возрастанию
+            </li>
+            <li class="shop-items__order-type checked">
+              По убыванию
+            </li>
+          </ul>
+        </div>
+        <articl>
+          <div class="shop-items__img">
+            <img src="http://www.placehold.it/360x380" alt="Любительская селфи-палка">
+            <a class="btn" href="#">В корзину</a>
+            <a class="shop-items__compare-btn" href="#">Добавить к сравнению</a>
+          </div>
+          <p>
+            Любительская селфи-палка
+          </p>
+          <span class="shop-items__price">500 руб.</span>
+        </articl>
+        <articl>
+          <div class="shop-items__img">
+            <img src="http://www.placehold.it/360x380" alt="Профессиональная селфи-палка">
+            <a class="btn" href="#">В корзину</a>
+            <a class="shop-items__compare-btn" href="#">Добавить к сравнению</a>
+          </div>
+          <p>
+            Профессиональная селфи-палка
+          </p>
+          <span class="shop-items__price">1 500 руб.</span>
+        </articl>
+        <articl>
+          <div class="shop-items__img">
+            <img src="http://www.placehold.it/360x380" alt="Непотопляемая селфи-палка">
+            <a class="btn" href="#">В корзину</a>
+            <a class="shop-items__compare-btn" href="#">Добавить к сравнению</a>
+          </div>
+          <p>
+            Непотопляемая селфи-палка
+          </p>
+          <span class="shop-items__price">2 500 руб.</span>
+        </articl>
+        <articl>
+          <div class="shop-items__img">
+            <img src="http://www.placehold.it/360x380" alt="Селфи-палка &laquo;Следуй за мной&raquo;">
+            <a class="btn" href="#">В корзину</a>
+            <a class="shop-items__compare-btn" href="#">Добавить к сравнению</a>
+          </div>
+          <p>
+            Селфи-палка &laquo;Следуй за мной&raquo;
+          </p>
+          <span class="shop-items__price">500 руб.</span>
+        </articl>
+    </section>
+  </main>
+  <footer>
+    <h2 class="no-style-explanation-heading">Ссылки</h2>
+    <div class="container footer clearfix">
+      <div class="footer__left-column styling-block">
+        <b class="logo footer__logo">Device</b>
+        <p>
+          г. Москва, ул. Строителей, 15
+        </p>
+      </div>
+      <div  class="footer__center-column">
+        <ul class="footer__list-of-services">
+          <li class="footer__delivery">
+            Доставка
+          </li>
+          <li class="footer__guarantee">
+            Гарантия
+          </li>
+          <li class="footer__contact">
+            Контакты
+          </li>
+        </ul>
+        <ul class="footer__social">
+          <li>
+            <a class="footer__social-btn footer__social-btn-f" href="#">Facebook</a>
+          </li>
+          <li>
+            <a class="footer__social-btn footer__social-btn-inst" href="#">Instagram</a>
+          </li>
+          <li>
+            <a class="footer__social-btn footer__social-btn-tw" href="#">Twitter</a>
+          </li>
+        </ul>
+      </div>
+      <div  class="footer__right-column">
+        <ul class="tool-list footer__tool-list">
+          <li><a href="#">Выйти</a></li>
+          <li><a href="#">Сравнить</a></li>
+          <li><a href="#">Корзина</a></li>
+        </ul>
+        <p>
+          Тел.: +7 (495) 495-95-95
+        </p>
+        <a class="footer__copyright-link" href="https://htmlacademy.ru/intensive/htmlcss">Лендинг интенсива «Базовый HTML и CSS»</a>
+      </div>
+    </div>
+
+  </footer>
+</body>
+
+</html>
