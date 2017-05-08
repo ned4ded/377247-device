@@ -1,0 +1,25 @@
+body {
+  position: static;
+
+  min-width: 1140px;
+  margin: 0;
+  padding: 0;
+
+  font-weight: lighter;
+  font-size: 15px;
+  line-height: 1;
+  font-family: "Open Sans", "Arial", sans-serif;
+  color: black;
+
+  background-color: white;
+}
+
+.title {
+  margin: 0;
+  padding: 0;
+
+  font-weight: 900;
+  font-size: 47px;
+  font-family: "Gilroy", "Arial", sans-serif;
+  color: black;
+}
