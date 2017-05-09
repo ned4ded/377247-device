@@ -1,13 +1,19 @@
-
 /*------------------------------------*\
   Normalize section
 \*------------------------------------*/
 
 body {
+  position: static;
   min-width: 1440px;
   min-height: 2795px;
   margin: 0;
   padding: 0;
+  
+   font-weight: lighter;
+  font-size: 15px;
+  line-height: 1;
+  font-family: "Open Sans", "Arial", sans-serif;
+  color: black;
 
   background: rgb(0, 0, 0) url(../img/device-index.jpg) no-repeat 50% 0;
   background-size: auto;
@@ -29,6 +35,15 @@ body {
 /*------------------------------------*\
   Common section
 \*------------------------------------*/
+.title {
+  margin: 0;
+  padding: 0;
+
+  font-weight: 900;
+  font-size: 47px;
+  font-family: "Gilroy", "Arial", sans-serif;
+  color: black;
+}
 
 header.container {
   /*MB I have to specify the selector's name*/
@@ -358,10 +373,8 @@ header.container {
   left: 0;
 
   width: 100px;
-
   background-color: white;
 }
-
 .popular-goods {
   display: flex;
   justify-content: space-between;
@@ -538,8 +551,7 @@ header.container {
 .info__btn {
   width: 260px;
 }
-
-
 /*------------------------------------*\
   CATALOG section
 \*------------------------------------*/
+
