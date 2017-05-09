@@ -5,7 +5,13 @@
   <meta charset="utf-8">
   <title>HTML Academy: Девайс</title>
   <link rel="stylesheet" href="css/style.css">
-  <!-- <link rel="stylesheet" href="css/markup-color-border.css"> -->
+  <link rel="stylesheet" href="css/markup-color-border.css">
+  <style>
+    body {
+      background: rgb(0, 0, 0) url(img/device-catalog.jpg) no-repeat 50% 0;
+      background-size: auto;
+    }
+  </style>
 </head>
 
 <body>
@@ -17,16 +23,15 @@
       </a>
       <h2 class="no-style-explanation-heading">Главное меню</h2>
       <div class="main-header__menu clearfix">
-
         <div class="main-header__toolbar">
           <form>
             <input type="search" name="site-search" placeholder="Поиск по сайту">
           </form>
           <ul class="main-header__user-block">
             <li>
-              <p>
+              <!-- <p>
                 Валентин Петухов
-              </p>
+              </p> -->
               <a href="#">Выйти</a>
             </li>
             <li>
@@ -74,10 +79,10 @@
       </div>
     </div>
   </header>
-  <main class="container clearfix">
+  <main class="container clearfix container__catalog">
     <div class="page-heading">
       <h1 class="page-heading__title title">Моноподы для селфи</h1>
-      <ul class="page-heading__breadcrumbs">
+      <ul class="page-heading__breadcrumbs clearfix">
         <li>
           <a href="#">Главная</a>
         </li>
@@ -152,10 +157,10 @@
           <input type="radio" name="bluetooth" value="0"> Нет
         </label>
       </fieldset>
-      <input class="btn" type="submit" name="Submit-filters" value="Показать">
+      <input class="btn filters__btn" type="submit" name="Submit-filters" value="Показать">
     </form>
     <section class="shop-items">
-      <div lass="shop-items__sort">
+      <div class="shop-items__sort">
         <legend class="legend-heading">
           Сортировка:
         </legend>
@@ -181,54 +186,59 @@
       </div>
       <article>
         <div class="shop-items__img">
-          <img src="http://www.placehold.it/360x380" alt="Любительская селфи-палка">
+          <img src="img/shop-item-1.jpg" alt="Любительская селфи-палка">
           <a class="btn" href="#">В корзину</a>
           <a class="shop-items__compare-btn" href="#">Добавить к сравнению</a>
         </div>
-        <article>
-          <div class="shop-items__img">
-            <img src="img/shop-item-1.jpg" alt="Любительская селфи-палка">
-            <a class="btn" href="#">В корзину</a>
-            <a class="shop-items__compare-btn" href="#">Добавить к сравнению</a>
-          </div>
-          <p>
-            Любительская селфи-палка
-          </p>
-          <span class="shop-items__price">500 руб.</span>
-        </article>
-        <article>
-          <div class="shop-items__img">
-            <img src="img/shop-item-2.jpg" alt="Профессиональная селфи-палка">
-            <a class="btn" href="#">В корзину</a>
-            <a class="shop-items__compare-btn" href="#">Добавить к сравнению</a>
-          </div>
-          <p>
-            Профессиональная селфи-палка
-          </p>
-          <span class="shop-items__price">1 500 руб.</span>
-        </article>
-        <article>
-          <div class="shop-items__img">
-            <img src="img/shop-item-3.jpg" alt="Непотопляемая селфи-палка">
-            <a class="btn" href="#">В корзину</a>
-            <a class="shop-items__compare-btn" href="#">Добавить к сравнению</a>
-          </div>
-          <p>
-            Непотопляемая селфи-палка
-          </p>
-          <span class="shop-items__price">2 500 руб.</span>
-        </article>
-        <article>
-          <div class="shop-items__img">
-            <img src="img/shop-item-4.jpg" alt="Селфи-палка &laquo;Следуй за мной&raquo;">
-            <a class="btn" href="#">В корзину</a>
-            <a class="shop-items__compare-btn" href="#">Добавить к сравнению</a>
-          </div>
-          <p>
-            Селфи-палка &laquo;Следуй за мной&raquo;
-          </p>
-          <span class="shop-items__price">500 руб.</span>
-        </article>
+        <p>
+          Любительская селфи-палка
+        </p>
+        <span class="shop-items__price">500 руб.</span>
+      </article>
+      <article>
+        <div class="shop-items__img">
+          <img src="img/shop-item-2.jpg" alt="Профессиональная селфи-палка">
+          <a class="btn" href="#">В корзину</a>
+          <a class="shop-items__compare-btn" href="#">Добавить к сравнению</a>
+        </div>
+        <p>
+          Профессиональная селфи-палка
+        </p>
+        <span class="shop-items__price">1 500 руб.</span>
+      </article>
+      <article>
+        <div class="shop-items__img">
+          <img src="img/shop-item-3.jpg" alt="Непотопляемая селфи-палка">
+          <a class="btn" href="#">В корзину</a>
+          <a class="shop-items__compare-btn" href="#">Добавить к сравнению</a>
+        </div>
+        <p>
+          Непотопляемая селфи-палка
+        </p>
+        <span class="shop-items__price">2 500 руб.</span>
+      </article>
+      <article>
+        <div class="shop-items__img">
+          <img src="img/shop-item-4.jpg" alt="Селфи-палка &laquo;Следуй за мной&raquo;">
+          <a class="btn" href="#">В корзину</a>
+          <a class="shop-items__compare-btn" href="#">Добавить к сравнению</a>
+        </div>
+        <p>
+          Селфи-палка &laquo;Следуй за мной&raquo;
+        </p>
+        <span class="shop-items__price">500 руб.</span>
+      </article>
+      <ul class="shop-items__pagination">
+        <li><a href="#">Назад</a></li>
+        <li>
+          <ul>
+            <li><a href="#">1</a></li>
+            <li><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Вперед</a></li>
+      </ul>
     </section>
   </main>
   <footer>
