@@ -5,7 +5,11 @@
   <meta charset="utf-8">
   <title>HTML Academy: Девайс</title>
   <link rel="stylesheet" href="css/style.css">
-  <!-- <link rel="stylesheet" href="css/markup-color-border.css"> -->
+  <link rel="stylesheet" href="css/markup-color-border.css">
+  <style>
+  body {background: rgb(0, 0, 0) url(img/device-index.jpg) no-repeat 50% 0;
+  background-size: auto;}
+  </style>
 </head>
 
 <body>
@@ -15,7 +19,7 @@
       <b class="logo main-header__logo">
         Device
       </b>
-      <h2 class="no-style-explanation-heading">Главное меню</h2>
+      <!-- <h2 class="no-style-explanation-heading">Главное меню</h2> -->
       <div class="main-header__menu clearfix">
 
         <ul class="main-header__toolbar">
@@ -24,8 +28,9 @@
               <input type="search" name="site-search" placeholder="Поиск по сайту">
             </form>
           </li>
-          <li>
-            <a href="#">Войти</a>
+          <li class="main-header__login-block">
+            <a class="main-header__login-block--login" href="#">Войти</a>
+            <a class="main-header__login-block--logout" href="#">Выйти</a>
           </li>
           <li>
             <a href="#">Сравнить</a>
@@ -80,13 +85,13 @@
         <div class="promo__img"><img src="img/promo-slider-img-1.png" alt="Самая длинная палка для селфи" width="384" height="486"></div>
         <div class="promo__info styling-block">
           <span class="promo__info-slid-number">01</span>
-          <h3>Делай селфи, как Бен Стиллер!</h3> <!-- Change this tag on styled P -->
+          <h3 class="promo__slogan">Делай селфи, как Бен Стиллер!</h3> <!-- Change this tag on styled P -->
           <p>
             Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.
           </p>
           <a class="btn promo__btn" href="#">Подробнее</a>
           <div class="slider-pagination"></div>
-          <table>
+          <table class="promo__spec">
             <tr class="promo__spec-item">
               <td>
                 Длина палки
@@ -143,7 +148,7 @@
         <div class="promo__img"><img src="img/promo-slider-img-2.png" alt="Мотивирующие фитнес-браслеты" width="345" height="485"></div>
         <div class="promo__info styling-block">
           <span class="promo__info-slid-number">02</span>
-          <h3>Худеем правильно!</h3> <!-- Change this tag on styled P -->
+          <h3 class="promo__slogan">Худеем правильно!</h3> <!-- Change this tag on styled P -->
           <p>
             Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.
           </p>
@@ -167,7 +172,7 @@
         <div class="promo__img"><img src="img/promo-slider-img-3.png" alt="Квадрокоптер с мощным лазером" width="526" height="334"></div>
         <div class="promo__info styling-block">
           <span class="promo__info-slid-number">03</span>
-          <h3>Порхает как бабочка, жалит как пчела!</h3> <!-- Change this tag on styled P -->
+          <h3 class="promo__slogan">Порхает как бабочка, жалит как пчела!</h3> <!-- Change this tag on styled P -->
           <p>
             Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.
           </p>

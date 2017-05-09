@@ -1,22 +1,26 @@
 /*------------------------------------*\
-  Normalize section
+            COMMON SECTION
 \*------------------------------------*/
 
 body {
   position: static;
+
   min-width: 1440px;
-  min-height: 2795px;
   margin: 0;
   padding: 0;
-  
-   font-weight: lighter;
+
+  font-weight: lighter;
   font-size: 15px;
   line-height: 1;
   font-family: "Open Sans", "Arial", sans-serif;
   color: black;
+}
 
-  background: rgb(0, 0, 0) url(../img/device-index.jpg) no-repeat 50% 0;
-  background-size: auto;
+ul {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
 }
 
 .clearfix::after {
@@ -33,8 +37,33 @@ body {
 }
 
 /*------------------------------------*\
-  Common section
+            HIDEN ELEMS
 \*------------------------------------*/
+/*---------------SLIDER-------------- */
+.slide-one {
+  visibility: visible;
+}
+
+.slide-two,
+.slide-three {
+  display: none !important; /* HERE IS TEMPORARY USE OF! Important UNTIL I START TO CODING SLIDER MARKUP*/
+}
+/*-----------CATALOG SUB MENU-------- */
+.main-header__nav > li > ul {
+  display: none !important;
+}
+/*-----------LOGIN BLOCK------------- */
+.main-header__login-block--logout {
+  display: none !important;
+}
+/*-----------catalog------------- */
+.shop-items__img a {
+  display: none !important;
+}
+/*------------------------------------*\
+            HIDEN ELEMS
+\*------------------------------------*/
+
 .title {
   margin: 0;
   padding: 0;
@@ -48,13 +77,6 @@ body {
 header.container {
   /*MB I have to specify the selector's name*/
   padding-top: 90px;
-  padding-bottom: 58px;
-}
-
-.footer {
-  display: flex;
-  min-height: 196px;
-  padding-top: 64px;
   padding-bottom: 58px;
 }
 
@@ -78,7 +100,7 @@ header.container {
 .tool-list {
   position: relative;
 
-  display: flex;
+  display: block;
   margin: 0;
   padding: 0;
 
@@ -86,7 +108,10 @@ header.container {
 }
 
 .tool-list li {
-  display: block;
+  display: inline-block;
+
+  line-height: 27px;
+  vertical-align: middle;
 }
 
 .tool-list li::before {
@@ -123,14 +148,21 @@ header.container {
   list-style: none;
 }
 
-
-.slide-one {
-  visibility: visible;
+.main-header__logo {
+  position: absolute;
+  top: -70px;
 }
 
-.slide-two,
-.slide-three {
-  display: none !important; /* HERE IS TEMPORARY USE OF! Important UNTIL I START TO CODING SLIDER MARKUP*/
+.main-header__toolbar,
+.main-header__nav {
+  display: flex;
+  align-items: center;
+  height: 20px;
+}
+
+.main-header__toolbar {
+  flex-basis: 100px;
+  margin-bottom: 45px;
 }
 
 .styling-block::after {
@@ -145,8 +177,18 @@ header.container {
   display: block;
   width: 220px;
   height: 40px;
+  margin: 0;
+  padding: 0;
+
+  border: 0;
 }
 
+.footer {
+  display: flex;
+  min-height: 196px;
+  padding-top: 64px;
+  padding-bottom: 58px;
+}
 
 .footer__left-column {
   position: relative;
@@ -261,21 +303,6 @@ header.container {
 /*------------------------------------*\
   INDEX  section
 \*------------------------------------*/
-
-.main-header__logo {
-  position: absolute;
-  top: -70px;
-}
-
-.main-header__toolbar,
-.main-header__nav {
-  display: block;
-  height: 20px;
-}
-.main-header__toolbar {
-  margin-bottom: 45px;
-}
-
 .promo {
   width: auto;
   min-height: 500px;
@@ -309,7 +336,7 @@ header.container {
   margin-top: 85px;
 }
 
-.promo__info h2 {
+.promo__info .promo__slogan {
   display: block;
   width: auto;
   min-height: 100px;
@@ -348,9 +375,9 @@ header.container {
 }
 
 .promo__spec {
-  display: flex;
   clear: both;
   width: auto;
+  width: 480px;
   min-height: 90px;
   margin: 0;
   margin-top: 90px; /*THIS BLOCK COULDN'T SENSE 2 BLOCKS ABOVE BECAUSE OF THEIR FLOAT PROPERTY, IN THIS CASE MARGIN IS CALCULATED FROM P BLOCK*/
@@ -373,6 +400,7 @@ header.container {
   left: 0;
 
   width: 100px;
+
   background-color: white;
 }
 .popular-goods {
@@ -496,7 +524,7 @@ header.container {
   justify-content: space-between;
   width: auto;
   min-height: 561px;
-  margin-bottom: 85px;
+  margin-bottom: 83px;
 }
 
 .info > div {
@@ -555,3 +583,134 @@ header.container {
   CATALOG section
 \*------------------------------------*/
 
+.container__catalog,
+.shop-items__sort,
+.shop-items,
+.shop-items__pagination,
+.shop-items__pagination ul {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: flex-start;
+}
+.shop-items {
+  justify-content: space-between;
+  align-content: flex-start;
+  width: 760px;
+  min-height: 1210px;
+  margin-bottom: 73px;
+}
+.shop-items__sort {
+  width: 760px;
+  height: 70px;
+  margin-bottom: 70px;
+}
+.shop-items__sort ul {
+  display: flex;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+.shop-items__pagination,
+.shop-items__pagination ul {
+  justify-content: center;
+  align-items: center;
+}
+
+.shop-items__pagination {
+  justify-content: space-between;
+  width: 760px;
+  height: 70px;
+  margin-top: -15px;
+}
+
+.page-heading {
+  width: 1160px;
+  margin-bottom: 50px;
+  padding: 30px 60px 0;
+}
+
+.page-heading__title {
+  margin-bottom: 30px;
+}
+
+.page-heading__breadcrumbs li {
+  float: left;
+}
+
+.filters {
+  width: 202px;
+  min-height: 780px;
+  margin-right: 70px;
+  padding: 0 68px 0 60px;
+}
+
+.filters fieldset {
+  margin: 0;
+  padding: 0;
+
+  border: 0;
+}
+
+
+.legend-heading {
+  display: block;
+  width: 120px; /* GRIDIN ONLY*/
+  margin-top: 30px;
+
+  line-height: 1;
+}
+
+.legend-heading {
+  margin-bottom: 95px;
+}
+
+.filters__price,
+.filters__color,
+.filters__bluetooth {
+  width: 202px; /* GRIDIN ONLY*/
+  min-height: 140px;
+}
+
+.filters__color {
+  min-height: 285px;
+}
+
+.filters__bluetooth {
+  min-height: 168px;
+}
+
+.btn.filters__btn {
+  width: 200px;
+}
+
+
+
+
+
+
+
+.shop-items__sort ul:nth-child(2) {
+  margin-right: auto;
+}
+
+.shop-items > article {
+  width: auto;
+  margin-bottom: 40px;
+}
+
+.shop-items__img {
+  margin-bottom: 35px;
+}
+
+.shop-items > article > p {
+  float: left;
+  width: 260px;
+  min-height: 50px;
+  margin: 0;
+}
+
+.shop-items__price {
+  display: block;
+  float: right;
+  min-width: 80px;
+  min-height: 50px;
+}
