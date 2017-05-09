@@ -1,0 +1,557 @@
+/*------------------------------------*\
+  Normalize section
+\*------------------------------------*/
+
+body {
+  position: static;
+  min-width: 1440px;
+  min-height: 2795px;
+  margin: 0;
+  padding: 0;
+  
+   font-weight: lighter;
+  font-size: 15px;
+  line-height: 1;
+  font-family: "Open Sans", "Arial", sans-serif;
+  color: black;
+
+  background: rgb(0, 0, 0) url(../img/device-index.jpg) no-repeat 50% 0;
+  background-size: auto;
+}
+
+.clearfix::after {
+  content: "";
+
+  display: table;
+  clear: both;
+}
+
+.container {
+  width: 1160px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+/*------------------------------------*\
+  Common section
+\*------------------------------------*/
+.title {
+  margin: 0;
+  padding: 0;
+
+  font-weight: 900;
+  font-size: 47px;
+  font-family: "Gilroy", "Arial", sans-serif;
+  color: black;
+}
+
+header.container {
+  /*MB I have to specify the selector's name*/
+  padding-top: 90px;
+  padding-bottom: 58px;
+}
+
+.footer {
+  display: flex;
+  min-height: 196px;
+  padding-top: 64px;
+  padding-bottom: 58px;
+}
+
+.header {
+  position: relative;
+
+  width: 1040px;
+  margin: 0 auto;
+}
+
+.logo {
+  display: block;
+  width: 165px;
+  height: 35px;   /*GRIDDING */
+}
+
+.no-style-explanation-heading {
+  display: none;
+}
+
+.tool-list {
+  position: relative;
+
+  display: flex;
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.tool-list li {
+  display: block;
+}
+
+.tool-list li::before {
+  content: "";
+  position: absolute;
+
+  display: block;
+  width: 15px;
+  height: 15px;
+}
+
+.login {
+  width: 78px; /* GRIDING ONLY */
+}
+
+.compare {
+  width: 110px; /* GRIDING ONLY */
+}
+
+.cart {
+  width: 60px; /* GRIDING ONLY */
+}
+
+.main-header__menu {
+  width: 1040px;
+}
+
+.main-header__toolbar,
+.main-header__nav {
+  display: block;
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+
+.slide-one {
+  visibility: visible;
+}
+
+.slide-two,
+.slide-three {
+  display: none !important; /* HERE IS TEMPORARY USE OF! Important UNTIL I START TO CODING SLIDER MARKUP*/
+}
+
+.styling-block::after {
+  content: "";
+
+  display: block;
+  width: 80px;
+  height: 7px;
+}
+
+.btn {
+  display: block;
+  width: 220px;
+  height: 40px;
+}
+
+
+.footer__left-column {
+  position: relative;
+
+  width: 260px;
+  min-height: 200px;
+  margin-right: 100px;
+}
+
+.footer__logo {
+  margin-bottom: 35px;
+}
+
+.footer__right-column p,
+.footer__left-column p {
+  min-height: 27px;
+}
+.footer__left-column.styling-block::after {
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+
+  background-color: rgba(255, 198, 0, 1);
+}
+
+.footer__center-column {
+  width: 440px;
+  min-height: 128px;
+  padding-top: 70px;
+}
+
+.footer__list-of-services {
+  display: inline-flex;
+  width: 440px;
+  min-height: 27px;
+  margin: 0;
+  margin-bottom: 60px;
+  padding: 0;
+
+  list-style: none;
+}
+
+.footer__delivery,
+.footer__contact {
+  width: 140px;
+  min-height: 27px;
+}
+
+.footer__guarantee {
+  width: 160px;
+  min-height: 27px;
+}
+
+.footer__social {
+  display: flex;
+  width: 160px;
+  height: 38px;
+  margin: auto;
+  padding: 0;
+
+  list-style: none;
+}
+
+.footer__social-btn {
+  display: block;
+  width: 39px;
+  height: 38px;
+
+  font-size: 0;
+}
+
+.footer__social-btn-f {
+  margin-left: 6px;
+}
+
+.footer__social-btn-inst {
+  margin-left: 16px;
+}
+
+.footer__social-btn-tw {
+  margin-left: 16px;
+}
+
+.footer__right-column {
+  position: relative;
+
+  width: 360px;
+  min-height: 200px;
+}
+
+.footer__tool-list {
+  min-height: 27px;
+  margin-bottom: 40px;
+  padding-left: 35px;
+}
+
+.footer__tool-list li {
+  margin-right: 40px;
+}
+
+.footer__copyright-link {
+  position: absolute;
+  right: 0;
+  bottom: 8px;
+
+  display: block;
+  width: 27px;
+  height: 34px;
+
+  font-size: 0;
+}
+/*------------------------------------*\
+  INDEX  section
+\*------------------------------------*/
+
+.main-header__logo {
+  position: absolute;
+  top: -70px;
+}
+
+.main-header__toolbar,
+.main-header__nav {
+  display: block;
+  height: 20px;
+}
+.main-header__toolbar {
+  margin-bottom: 45px;
+}
+
+.promo {
+  width: auto;
+  min-height: 500px;
+  margin: 0;
+  margin-bottom: 92px;
+  padding: 0;
+}
+
+.promo li {
+  display: flex;
+}
+
+.promo__img,
+.promo__info {
+  display: block;
+  margin: 0;
+  margin-right: 20px;
+  padding: 0;
+}
+
+
+.promo__img {
+  width: 580px;
+  min-height: 500px;
+}
+
+.promo__info {
+  width: 480px;
+  min-height: 410px;
+  margin: 0;
+  margin-top: 85px;
+}
+
+.promo__info h2 {
+  display: block;
+  width: auto;
+  min-height: 100px;
+  margin: 0;
+  padding: 0;
+}
+
+.promo__info p {
+  width: auto;
+  min-height: 100px;
+}
+
+.promo__info li {
+  position: relative;
+}
+
+.promo__info-slid-number {
+  position: absolute;
+  top: -90px;
+  right: -20px;
+
+  display: block;
+  width: 200px; /*GRID ONLY*/
+  height: 140px; /*GRID ONLY*/
+}
+
+.promo__btn {
+  float: left;
+}
+
+.slider-pagination {
+  display: block;
+  float: right;
+  width: 80px;
+  height: 20px;
+}
+
+.promo__spec {
+  display: flex;
+  clear: both;
+  width: auto;
+  min-height: 90px;
+  margin: 0;
+  margin-top: 90px; /*THIS BLOCK COULDN'T SENSE 2 BLOCKS ABOVE BECAUSE OF THEIR FLOAT PROPERTY, IN THIS CASE MARGIN IS CALCULATED FROM P BLOCK*/
+  padding: 0;
+}
+
+.promo__spec li {
+  display: flex;
+  width: 160px;
+  min-height: 90px; /*GRID*/
+}
+
+.promo__spec li:nth-child(2n) {
+  width: 140px;
+}
+/*SHOULD I FIX ADJOING CLASSES? */
+.promo__info.styling-block::after {
+  position: absolute;
+  top: -54px;
+  left: 0;
+
+  width: 100px;
+  background-color: white;
+}
+.popular-goods {
+  display: flex;
+  justify-content: space-between;
+  width: auto;
+  min-height: 245px;
+  margin: 0;
+  margin-bottom: 73px;
+  padding: 0;
+
+  list-style: none;
+}
+
+.popular-goods a {
+  display: block;
+  width: 160px;
+  height: auto;
+}
+
+.popular-goods span {
+  display: block;
+  min-height: 40px;
+  margin-top: 190px;
+
+  opacity: 0.2; /*GRIDING ONLY*/
+}
+
+.popular-goods__img::before {
+  content: "";
+  position: absolute;
+  top: -195px;
+  left: 0;
+
+  width: 160px;
+  height: 160px;
+  margin: 0 auto;
+}
+
+.services {
+  position: relative;
+
+  display: flex;
+  width: auto;
+  min-height: 320px;
+  margin-bottom: 163px;
+}
+
+.services__list-of-services {
+  width: 300px;
+  height: auto;
+  margin: 0;
+  margin-right: 100px;
+  padding: 79px 0 71px 0;
+
+  list-style: none;;
+}
+
+.services__list-of-services li {
+  margin-bottom: 25px;
+}
+
+.services__list-of-services li:last-child {
+  margin-bottom: 0;
+}
+
+.services__info {
+  width: 460px;
+  min-height: 170px;
+  margin: 80px 0 70px;
+  padding: 0;
+
+  list-style: none;
+}
+
+.services__info-title {
+  /*GRIDING ONLY*/
+  display: block;
+  height: 42px;
+  margin: 0;
+  margin-bottom: 40px;
+}
+
+.services__info-descr {
+  min-height: 75px; /*GRIDING ONLY*/
+  margin: 0;
+
+  line-height: 1;
+}
+
+.services__img::after {
+  content: "";
+  position: absolute;
+  top: -17px; /*GRIDDING ONLY*/
+  right: -262px; /*GRIDDING ONLY*/
+
+  display: block;
+  width: 260px; /*GRIDDING ONLY*/
+  height: 205px; /*GRIDDING ONLY*/
+
+  outline: 1px solid blue; /*GRIDDING ONLY*/
+}
+
+.partners {
+  display: flex;
+  justify-content: space-around;
+  width: auto;
+  height: 100px;
+  margin-bottom: 93px;
+}
+
+.partners img {
+  width: 260px;
+  height: 100px;
+}
+
+.info {
+  position: relative;
+
+  display: flex;
+  justify-content: space-between;
+  width: auto;
+  min-height: 561px;
+  margin-bottom: 85px;
+}
+
+.info > div {
+  width: 560px;
+  min-height: 560px;
+}
+
+.info .styling-block::after {
+  position: absolute;
+  top: -2px; /*GRIDING ONLY*/
+  left: 0;
+
+  background-color: black;
+}
+
+.info__title {
+  display: block;
+  width: auto;
+  height: 47px;
+  margin: 50px 0 52px;
+  margin-top: 50px;
+  /*GRIDING ONLI*/
+
+  line-height: 1;
+}
+
+.info__text-descr {
+  height: 45px; /* GRIDING ONLY */
+  margin: 0;
+  margin-bottom: 45px;
+
+  line-height: 1;
+}
+
+.info__about-us .info__text-descr:last-of-type {
+  margin-bottom: 86px;
+}
+
+.info__list-of-trnsprt-cmpnies {
+  min-height: 95px;
+  margin: 0;
+  margin-bottom: 63px;
+  padding: 0;
+
+  list-style: none;
+}
+
+.info__map {
+  margin-bottom: 68px;
+}
+
+.info__btn {
+  width: 260px;
+}
+/*------------------------------------*\
+  CATALOG section
+\*------------------------------------*/
+
