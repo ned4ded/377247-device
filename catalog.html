@@ -7,35 +7,36 @@
   <!-- <link rel="stylesheet" href="css/style.css"> -->
   <!-- <link rel="stylesheet" href="css/markup-color-border.css"> -->
 </head>
+
 <body>
   <header class="container clearfix">
     <div class="header main-header">
 
-      <b class="logo main-header__logo">
-        Device
-      </b>
+      <a href="index.html">
+        <b class="logo main-header__logo">Device</b>
+      </a>
       <h2 class="no-style-explanation-heading">Главное меню</h2>
       <div class="main-header__menu clearfix">
 
-        <ul class="main-header__toolbar">
-          <li>
-            <form>
-              <input type="search" name="Site-search" placeholder="Поиск по сайту">
-            </form>
-          </li>
-          <li>
-            <p>
-              Валентин Петухов
-            </p>
-            <a href="#">Выйти</a>
-          </li>
-          <li>
-            <a href="#">Сравнить</a>
-          </li>
-          <li>
-            <a href="#">Корзина</a>
-          </li>
-        </ul>
+        <div class="main-header__toolbar">
+          <form>
+            <input type="search" name="site-search" placeholder="Поиск по сайту">
+          </form>
+          <ul class="main-header__user-block">
+            <li>
+              <p>
+                Валентин Петухов
+              </p>
+              <a href="#">Выйти</a>
+            </li>
+            <li>
+              <a href="#">Сравнить</a>
+            </li>
+            <li>
+              <a href="#">Корзина</a>
+            </li>
+          </ul>
+        </div>
         <ul class="main-header__nav">
           <li>
             <a href="#">Каталог товаров</a>
@@ -154,115 +155,86 @@
       <input class="btn" type="submit" name="Submit-filters" value="Показать">
     </form>
     <section class="shop-items">
-      <!-- SHOULD I USE FORM FOR SORTING? -->
-        <!-- <form class="shop-items__sort">
-            <legend>
-              Сортировка:
-            </legend>
-          <fieldset class="shop-items__sort-column">
-            <ul>
-            <li>
-              <button type="radio" name="order-by-price" value="1">По цене</button>
-            </li>
-            <li>
-              <button type="radio" name="order-by-type" value="2">По типу</button>
-            </li>
-            <li>
-              <button type="radio" name="order-by-popular" value="3">По популярности</button>
-            </li>
-          </ul>
-          </fieldset>
-          <fieldset class="shop-items__sort-order">
-            <ul>
-              <li>
-                <button type="radio" name="desc-order" value="0">По популярности</button>
-              </li>
-              <li>
-                <button type="radio" name="asc-order" value="1" checked>По популярности</button>
-              </li>
-            </ul>
-          </fieldset>
-        </form> -->
-        <div lass="shop-items__sort">
-          <legend class="legend-heading">
-            Сортировка:
-          </legend>
-          <ul>
-            <li class="shop-items__sort-type checked">
-              По цене
-            </li>
-            <li class="shop-items__sort-type">
-              По типу
-            </li>
-            <li class="shop-items__sort-type">
-              По популярности
-            </li>
-            </ul>
-            <ul>
-            <li class="shop-items__order-type">
-              По возрастанию
-            </li>
-            <li class="shop-items__order-type checked">
-              По убыванию
-            </li>
-          </ul>
+      <div lass="shop-items__sort">
+        <legend class="legend-heading">
+          Сортировка:
+        </legend>
+        <ul>
+          <li class="shop-items__sort-type checked">
+            <a href="#">По цене</a>
+          </li>
+          <li class="shop-items__sort-type">
+            <a href="#">По типу</a>
+          </li>
+          <li class="shop-items__sort-type">
+            <a href="#">По популярности</a>
+          </li>
+        </ul>
+        <ul>
+          <li class="shop-items__order-type">
+            <a href="#">По возрастанию</a>
+          </li>
+          <li class="shop-items__order-type checked">
+            <a href="#">По убыванию</a>
+          </li>
+        </ul>
+      </div>
+      <article>
+        <div class="shop-items__img">
+          <img src="http://www.placehold.it/360x380" alt="Любительская селфи-палка">
+          <a class="btn" href="#">В корзину</a>
+          <a class="shop-items__compare-btn" href="#">Добавить к сравнению</a>
         </div>
-        <articl>
-          <div class="shop-items__img">
-            <img src="http://www.placehold.it/360x380" alt="Любительская селфи-палка">
-            <a class="btn" href="#">В корзину</a>
-            <a class="shop-items__compare-btn" href="#">Добавить к сравнению</a>
-          </div>
-          <p>
-            Любительская селфи-палка
-          </p>
-          <span class="shop-items__price">500 руб.</span>
-        </articl>
-        <articl>
-          <div class="shop-items__img">
-            <img src="http://www.placehold.it/360x380" alt="Профессиональная селфи-палка">
-            <a class="btn" href="#">В корзину</a>
-            <a class="shop-items__compare-btn" href="#">Добавить к сравнению</a>
-          </div>
-          <p>
-            Профессиональная селфи-палка
-          </p>
-          <span class="shop-items__price">1 500 руб.</span>
-        </articl>
-        <articl>
-          <div class="shop-items__img">
-            <img src="http://www.placehold.it/360x380" alt="Непотопляемая селфи-палка">
-            <a class="btn" href="#">В корзину</a>
-            <a class="shop-items__compare-btn" href="#">Добавить к сравнению</a>
-          </div>
-          <p>
-            Непотопляемая селфи-палка
-          </p>
-          <span class="shop-items__price">2 500 руб.</span>
-        </articl>
-        <articl>
-          <div class="shop-items__img">
-            <img src="http://www.placehold.it/360x380" alt="Селфи-палка &laquo;Следуй за мной&raquo;">
-            <a class="btn" href="#">В корзину</a>
-            <a class="shop-items__compare-btn" href="#">Добавить к сравнению</a>
-          </div>
-          <p>
-            Селфи-палка &laquo;Следуй за мной&raquo;
-          </p>
-          <span class="shop-items__price">500 руб.</span>
-        </articl>
+        <p>
+          Любительская селфи-палка
+        </p>
+        <span class="shop-items__price">500 руб.</span>
+      </article>
+      <article>
+        <div class="shop-items__img">
+          <img src="http://www.placehold.it/360x380" alt="Профессиональная селфи-палка">
+          <a class="btn" href="#">В корзину</a>
+          <a class="shop-items__compare-btn" href="#">Добавить к сравнению</a>
+        </div>
+        <p>
+          Профессиональная селфи-палка
+        </p>
+        <span class="shop-items__price">1 500 руб.</span>
+      </article>
+      <article>
+        <div class="shop-items__img">
+          <img src="http://www.placehold.it/360x380" alt="Непотопляемая селфи-палка">
+          <a class="btn" href="#">В корзину</a>
+          <a class="shop-items__compare-btn" href="#">Добавить к сравнению</a>
+        </div>
+        <p>
+          Непотопляемая селфи-палка
+        </p>
+        <span class="shop-items__price">2 500 руб.</span>
+      </article>
+      <article>
+        <div class="shop-items__img">
+          <img src="http://www.placehold.it/360x380" alt="Селфи-палка &laquo;Следуй за мной&raquo;">
+          <a class="btn" href="#">В корзину</a>
+          <a class="shop-items__compare-btn" href="#">Добавить к сравнению</a>
+        </div>
+        <p>
+          Селфи-палка &laquo;Следуй за мной&raquo;
+        </p>
+        <span class="shop-items__price">500 руб.</span>
+      </article>
     </section>
   </main>
   <footer>
     <h2 class="no-style-explanation-heading">Ссылки</h2>
     <div class="container footer clearfix">
       <div class="footer__left-column styling-block">
-        <b class="logo footer__logo">Device</b>
+        <a href="html.index"><b class="logo footer__logo">Device</b></a>
         <p>
           г. Москва, ул. Строителей, 15
         </p>
       </div>
-      <div  class="footer__center-column">
+      <div class="footer__center-column">
         <ul class="footer__list-of-services">
           <li class="footer__delivery">
             Доставка
@@ -286,7 +258,7 @@
           </li>
         </ul>
       </div>
-      <div  class="footer__right-column">
+      <div class="footer__right-column">
         <ul class="tool-list footer__tool-list">
           <li><a href="#">Выйти</a></li>
           <li><a href="#">Сравнить</a></li>
