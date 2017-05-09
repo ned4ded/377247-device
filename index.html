@@ -15,25 +15,24 @@
       <b class="logo main-header__logo">
         Device
       </b>
-      <h2 class="no-style-explanation-heading">Главное меню</h2>
+      <h2 class="no-style-explanation-heading">Главное меню</h2> <!--Здесь и далее использованы h2 заголовки с классом "no-style-explanation-heading" для предания контенту сайта более структурированного вида, скрываются с помощью CSS -->
       <div class="main-header__menu clearfix">
-
-        <ul class="main-header__toolbar">
-          <li>
-            <form>
-              <input type="search" name="site-search" placeholder="Поиск по сайту">
-            </form>
-          </li>
-          <li>
-            <a href="#">Войти</a>
-          </li>
-          <li>
-            <a href="#">Сравнить</a>
-          </li>
-          <li>
-            <a href="#">Корзина</a>
-          </li>
-        </ul>
+        <div class="main-header__toolbar">
+          <form>
+            <input type="search" name="site-search" placeholder="Поиск по сайту">
+          </form>
+          <ul class="main-header__user-block">
+            <li>
+              <a href="#">Войти</a>
+            </li>
+            <li>
+              <a href="#">Сравнить</a>
+            </li>
+            <li>
+              <a href="#">Корзина</a>
+            </li>
+          </ul>
+        </div>
         <ul class="main-header__nav">
           <li>
             <a href="#">Каталог товаров</a>
@@ -80,7 +79,7 @@
         <div class="promo__img"><img src="img/promo-slider-img-1.png" alt="Самая длинная палка для селфи" width="384" height="486"></div>
         <div class="promo__info styling-block">
           <span class="promo__info-slid-number">01</span>
-          <h3>Делай селфи, как Бен Стиллер!</h3> <!-- Change this tag on styled P -->
+          <p class="promo__slogan">Делай селфи, как Бен Стиллер!</p>
           <p>
             Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.
           </p>
@@ -110,40 +109,13 @@
               </td>
             </tr>
           </table>
-          <!-- MB I COULD REALISE THAT WITH TABLE TAG? -->
-          <!-- <ul class="promo__spec">
-            <li>
-              <p class="promo__spec-sgnfction">
-                8,5 м
-              </p>
-              <p class="promo__spec-item">
-                Длина палки
-              </p>
-            </li>
-            <li>
-              <p class="promo__spec-sgnfction">
-                5 кг
-              </p>
-              <p class="promo__spec-item">
-                Вес палки
-              </p>
-            </li>
-            <li>
-              <p class="promo__spec-sgnfction">
-                Карбон
-              </p>
-              <p class="promo__spec-item">
-                Материал
-              </p>
-            </li>
-          </ul> -->
         </div>
       </li>
       <li class="slide-two">
         <div class="promo__img"><img src="img/promo-slider-img-2.png" alt="Мотивирующие фитнес-браслеты" width="345" height="485"></div>
         <div class="promo__info styling-block">
           <span class="promo__info-slid-number">02</span>
-          <h3>Худеем правильно!</h3> <!-- Change this tag on styled P -->
+          <p class="promo__slogan">Худеем правильно!</p>
           <p>
             Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.
           </p>
@@ -167,7 +139,7 @@
         <div class="promo__img"><img src="img/promo-slider-img-3.png" alt="Квадрокоптер с мощным лазером" width="526" height="334"></div>
         <div class="promo__info styling-block">
           <span class="promo__info-slid-number">03</span>
-          <h3>Порхает как бабочка, жалит как пчела!</h3> <!-- Change this tag on styled P -->
+          <p class="promo__slogan">Порхает как бабочка, жалит как пчела!</p>
           <p>
             Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.
           </p>
@@ -191,14 +163,14 @@
               </td>
             </tr>
           </table>
-          </div>
+        </div>
       </li>
     </ul>
 
     <h2 class="no-style-explanation-heading">Популярные товары</h2>
     <ul class="popular-goods">
       <li>
-        <a href="#"><span class="popular-goods__img popular-goods__img-virtual"> Виртуальная реальность</span></a> <!-- THINK ABOUT IT* -->
+        <a href="#"><span class="popular-goods__img popular-goods__img-virtual"> Виртуальная реальность</span></a>
       </li>
       <li>
         <a href="#"><span class="popular-goods__img popular-goods__img-monopod">Моноподы для селфи</span></a>
@@ -236,25 +208,25 @@
       <h3 class="no-style-explanation-heading">Описание предлагаемых сервисов</h3>
       <ul class="services__info">
         <li class="slide-one services__img delivery-img">
-            <h4 class="services__info-title">Доставка</h4> <!-- THINK ABOUT IT, MB IT COULD BE REALISED WITH ID AND ::AFTER -->
-            <p class="services__info-descr">
-              Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита. Выгодные для нашего банка, разумеется.
-            </p>
+          <h4 class="services__info-title">Доставка</h4>
+          <p class="services__info-descr">
+            Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита. Выгодные для нашего банка, разумеется.
+          </p>
         </li>
         <li class="slide-two services__img guarantee-img">
-            <h4 class="services__info-title">Гарантия</h4> <!-- THINK ABOUT IT* -->
-            <p class="services__info-descr">
+          <h4 class="services__info-title">Гарантия</h4>
+          <p class="services__info-descr">
             Если из-за возгарания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый. Товар, не дом, конечно же.
           </p>
         </li>
         <li class="slide-three services__img bank-loan-img">
-            <h4 class="services__info-title">Кредит</h4> <!-- THINK ABOUT IT* -->
-            <p class="services__info-descr">
-              Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита. Выгодные для нашего банка, разумеется.
-            </p>
+          <h4 class="services__info-title">Кредит</h4>
+          <p class="services__info-descr">
+            Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита. Выгодные для нашего банка, разумеется.
+          </p>
         </li>
       </ul>
-      </div>
+    </div>
 
     <div class="partners">
       <h2 class="no-style-explanation-heading">Партнеры</h2>
@@ -306,7 +278,7 @@
           г. Москва, ул. Строителей, 15
         </p>
       </div>
-      <div  class="footer__center-column">
+      <div class="footer__center-column">
         <ul class="footer__list-of-services">
           <li class="footer__delivery">
             Доставка
@@ -330,7 +302,7 @@
           </li>
         </ul>
       </div>
-      <div  class="footer__right-column">
+      <div class="footer__right-column">
         <ul class="tool-list footer__tool-list">
           <li><a href="#">Войти</a></li>
           <li><a href="#">Сравнить</a></li>
