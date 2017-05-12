@@ -16,18 +16,18 @@
 </head>
 
 <body>
-  <header class="container header__catalog clearfix">
+  <header class="container clearfix header__catalog">
     <div class="header main-header">
       <b class="logo main-header__logo">
         Device
       </b>
       <div class="main-header__menu clearfix">
         <div class="main-header__toolbar">
-          <form class="" action="" method="get">
-            <label  class="main-header__search-bar">
+          <form action="index.html" method="get">
+            <div  class="main-header__search-bar">
               <input class="main-header__search-bar-input" type="search" name="site-search" value="" placeholder="Поиск по сайту">
               <input  class="main-header__search-bar-btn" type="submit" name="site-search" value="Найти"/>
-            </label>
+            </div>
           </form>
           <div class="main-header__user-block">
             <div class="login-block logout">
@@ -43,11 +43,11 @@
           <li>
             <input type="radio" name="main-header__nav-catalog" id="main-header__nav-btn-1" />
             <input type="radio" name="main-header__nav-catalog" id="main-header__nav-btn-2" checked/>
-            <a class="main-header__nav-catalog">
+            <div class="main-header__nav-catalog">
               <label for="main-header__nav-btn-1"></label>
               <label for="main-header__nav-btn-2"></label>
               Каталог товаров
-            </a>
+            </div>
             <ul class="main-header__nav-submenu">
               <li>
                 <a href="#">Виртуальная реальность</a>
@@ -100,9 +100,9 @@
       </ul>
     </div>
     <form class="filters">
-      <legend class="legend-heading">
+      <p class="legend-heading">
         Фильтр:
-      </legend>
+      </p>
       <fieldset class="filters__price">
         <legend>
           Стоимость
@@ -177,9 +177,9 @@
     </form>
     <section class="shop-items">
       <div class="shop-items__sort">
-        <legend class="legend-heading">
+        <p class="legend-heading">
           Сортировка:
-        </legend>
+        </p>
         <ul class="shop-items__sort-type">
           <li class="checked">
             <a href="#">По цене</a>

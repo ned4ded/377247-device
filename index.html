@@ -21,11 +21,11 @@
       </b>
       <div class="main-header__menu clearfix">
         <div class="main-header__toolbar">
-          <form class="" action="" method="get">
-            <label  class="main-header__search-bar">
+          <form action="index.html" method="get">
+            <div  class="main-header__search-bar">
               <input class="main-header__search-bar-input" type="search" name="site-search" value="" placeholder="Поиск по сайту">
               <input  class="main-header__search-bar-btn" type="submit" name="site-search" value="Найти"/>
-            </label>
+            </div>
           </form>
           <div class="main-header__user-block">
             <div class="login-block login">
@@ -41,11 +41,11 @@
           <li>
             <input type="radio" name="main-header__nav-catalog" id="main-header__nav-btn-1" />
             <input type="radio" name="main-header__nav-catalog" id="main-header__nav-btn-2" checked/>
-            <a class="main-header__nav-catalog">
+            <div class="main-header__nav-catalog">
               <label for="main-header__nav-btn-1"></label>
               <label for="main-header__nav-btn-2"></label>
               Каталог товаров
-            </a>
+            </div>
             <ul class="main-header__nav-submenu">
               <li>
                 <a href="#">Виртуальная реальность</a>
@@ -283,7 +283,7 @@
         </label>
         <label>
           Текст письма:
-          <textarea class="write-us-form__input write-us-form__input-textarea" type="text" name="email-text" value="" placeholder="В свободной форме"></textarea>
+          <textarea class="write-us-form__input write-us-form__input-textarea" name="email-text" placeholder="В свободной форме"></textarea>
         </label>
         <div class="btn filters__btn"><input class="btn" type="submit" name="submit-users-letter" value="Отправить"></div>
         <a class="close-btn" href="index.html"></a>
