@@ -16,6 +16,33 @@ body {
   color: black;
 }
 
+@Font-face {
+  font-weight: 900;
+  font-family: "Gilroy";
+
+  src: url(../fonts/gilroyextrabold.woff);
+}
+
+@Font-face {
+  font-weight: lighter;
+  font-family: "Gilroy";
+
+  src: url(../fonts/gilroylight.woff);
+}
+
+@Font-face {
+  font-family: "Open Sans";
+
+  src: url(../fonts/opensans.woff);
+}
+
+@Font-face {
+  font-weight: lighter;
+  font-family: "Open Sans";
+
+  src: url(../fonts/opensanslight.woff);
+}
+
 .page-heading__breadcrumbs,
 .main-header__nav,
 .shop-items__sort ul,
@@ -367,7 +394,7 @@ header.container::before {
 .main-header__nav > li:first-child {
   position: relative;
 
-  width: 220px;
+  width: 225px;
   margin-right: 288px;
   padding-right: 32px;
 }
