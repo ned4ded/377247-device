@@ -4,42 +4,51 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Девайс</title>
+  <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/markup-color-border.css">
-  <style>
+  <!-- <link rel="stylesheet" href="css/markup-color-border.css"> -->
+  <!--<style>
     body {
       background: rgb(0, 0, 0) url(img/device-catalog.jpg) no-repeat 50% 0;
       background-size: auto;
     }
-  </style>
+  </style> -->
 </head>
 
 <body>
-  <header class="container clearfix">
+  <header class="container header__catalog clearfix">
     <div class="header main-header">
-
-      <a href="index.html">
-        <b class="logo main-header__logo">Device</b>
-      </a>
-      <h2 class="no-style-explanation-heading">Главное меню</h2>
+      <b class="logo main-header__logo">
+        Device
+      </b>
       <div class="main-header__menu clearfix">
         <div class="main-header__toolbar">
-          <form>
-            <input type="search" name="site-search" placeholder="Поиск по сайту">
+          <form class="" action="" method="get">
+            <label  class="main-header__search-bar">
+              <input class="main-header__search-bar-input" type="search" name="site-search" value="" placeholder="Поиск по сайту">
+              <input  class="main-header__search-bar-btn" type="submit" name="site-search" value="Найти"/>
+            </label>
           </form>
           <div class="main-header__user-block">
-            <!-- <p>
-                Валентин Петухов
-            </p> -->
-            <a href="#">Выйти</a>
-            <a href="#">Сравнить</a>
-            <a href="#">Корзина</a>
+            <div class="login-block logout">
+              <a class="login-block--login" href="#">Войти</a>
+              <a class="login-block--logout" href="#">Валентин Петухов</a>
+              <a class="login-block--logout" href="#">Выйти</a>
+            </div>
+            <a class="compare" href="#">Сравнить</a>
+            <a class="cart" href="#">Корзина</a>
           </div>
         </div>
         <ul class="main-header__nav">
           <li>
-            <a href="#">Каталог товаров</a>
-            <ul>
+            <input type="radio" name="main-header__nav-catalog" id="main-header__nav-btn-1" />
+            <input type="radio" name="main-header__nav-catalog" id="main-header__nav-btn-2" checked/>
+            <a class="main-header__nav-catalog">
+              <label for="main-header__nav-btn-1"></label>
+              <label for="main-header__nav-btn-2"></label>
+              Каталог товаров
+            </a>
+            <ul class="main-header__nav-submenu">
               <li>
                 <a href="#">Виртуальная реальность</a>
               </li>
@@ -73,7 +82,9 @@
       </div>
     </div>
   </header>
-  <main class="container clearfix container__catalog">
+
+  <main class="catalog__background">
+    <div class="container clearfix container__catalog"> <!-- this container is for markuping the background -->
     <div class="page-heading">
       <h1 class="page-heading__title title">Моноподы для селфи</h1>
       <ul class="page-heading__breadcrumbs clearfix">
@@ -90,18 +101,27 @@
     </div>
     <form class="filters">
       <legend class="legend-heading">
-        Фильтры:
+        Фильтр:
       </legend>
       <fieldset class="filters__price">
         <legend>
           Стоимость
         </legend>
-        <label>
-          от <input type="text" name="min-price" value="0">
-        </label>
-        <label>
-          до <input type="text" name="max-price" value="5000">
-        </label>
+        <div class="filters__price-range-controls">
+          <div class="scale">
+            <div class="bar"></div>
+            <div class="toggle toggle-min"></div>
+            <div class="toggle toggle-max"></div>
+          </div>
+        </div>
+        <div class="filters__price-controls">
+          <label class="min-price">
+            от <input type="text" name="min-price" value="0">
+          </label>
+          <label class="max-price">
+            до <input type="text" name="max-price" value="5000">
+          </label>
+        </div>
       </fieldset>
       <fieldset class="filters__color">
         <legend>
@@ -151,29 +171,31 @@
           <input type="radio" name="bluetooth" value="0"> Нет
         </label>
       </fieldset>
-      <input class="btn filters__btn" type="submit" name="Submit-filters" value="Показать">
+      <div class="btn filters__btn">
+      <input class="btn" type="submit" name="Submit-filters" value="Показать">
+      </div>
     </form>
     <section class="shop-items">
       <div class="shop-items__sort">
         <legend class="legend-heading">
           Сортировка:
         </legend>
-        <ul>
-          <li class="shop-items__sort-type checked">
+        <ul class="shop-items__sort-type">
+          <li class="checked">
             <a href="#">По цене</a>
           </li>
-          <li class="shop-items__sort-type">
+          <li>
             <a href="#">По типу</a>
           </li>
-          <li class="shop-items__sort-type">
+          <li>
             <a href="#">По популярности</a>
           </li>
         </ul>
-        <ul>
-          <li class="shop-items__order-type">
-            <a href="#">По возрастанию</a>
+        <ul class="shop-items__order-type">
+          <li >
+            <a href="#" class="shop-items__order-type-asc">По возрастанию</a>
           </li>
-          <li class="shop-items__order-type checked">
+          <li class="shop-items__order-type-desc checked">
             <a href="#">По убыванию</a>
           </li>
         </ul>
@@ -184,9 +206,7 @@
           <a class="btn" href="#">В корзину</a>
           <a class="shop-items__compare-btn" href="#">Добавить к сравнению</a>
         </div>
-        <p>
-          Любительская селфи-палка
-        </p>
+          <a href="#">Любительская селфи-палка</a>
         <span class="shop-items__price">500 руб.</span>
       </article>
       <article>
@@ -195,9 +215,7 @@
           <a class="btn" href="#">В корзину</a>
           <a class="shop-items__compare-btn" href="#">Добавить к сравнению</a>
         </div>
-        <p>
-          Профессиональная селфи-палка
-        </p>
+          <a href="#">Профессиональная селфи-палка</a>
         <span class="shop-items__price">1 500 руб.</span>
       </article>
       <article>
@@ -206,9 +224,7 @@
           <a class="btn" href="#">В корзину</a>
           <a class="shop-items__compare-btn" href="#">Добавить к сравнению</a>
         </div>
-        <p>
-          Непотопляемая селфи-палка
-        </p>
+          <a href="#">Непотопляемая селфи-палка</a>
         <span class="shop-items__price">2 500 руб.</span>
       </article>
       <article>
@@ -217,16 +233,14 @@
           <a class="btn" href="#">В корзину</a>
           <a class="shop-items__compare-btn" href="#">Добавить к сравнению</a>
         </div>
-        <p>
-          Селфи-палка &laquo;Следуй за мной&raquo;
-        </p>
+          <a href="#">Селфи-палка &laquo;Следуй за мной&raquo;</a>
         <span class="shop-items__price">500 руб.</span>
       </article>
       <ul class="shop-items__pagination">
         <li><a href="#">Назад</a></li>
         <li>
           <ul>
-            <li><a href="#">1</a></li>
+            <li><a class="current-page">1</a></li>
             <li><a href="#">2</a></li>
             <li><a href="#">3</a></li>
           </ul>
@@ -234,26 +248,27 @@
         <li><a href="#">Вперед</a></li>
       </ul>
     </section>
+    </div>
   </main>
-  <footer>
-    <h2 class="no-style-explanation-heading">Ссылки</h2>
+
+  <footer class="footer-background">
     <div class="container footer clearfix">
       <div class="footer__left-column styling-block">
-        <a href="html.index"><b class="logo footer__logo">Device</b></a>
+        <a class="logo footer__logo" href="index.html">Device</a>
         <p>
           г. Москва, ул. Строителей, 15
         </p>
       </div>
       <div class="footer__center-column">
         <ul class="footer__list-of-services">
-          <li class="footer__delivery">
-            Доставка
+          <li>
+            <a href="#">Доставка</a>
           </li>
-          <li class="footer__guarantee">
-            Гарантия
+          <li>
+            <a href="#">Гарантия</a>
           </li>
-          <li class="footer__contact">
-            Контакты
+          <li>
+            <a href="#">Контакты</a>
           </li>
         </ul>
         <ul class="footer__social">
@@ -269,11 +284,14 @@
         </ul>
       </div>
       <div class="footer__right-column">
-        <ul class="tool-list footer__tool-list">
-          <li><a href="#">Выйти</a></li>
-          <li><a href="#">Сравнить</a></li>
-          <li><a href="#">Корзина</a></li>
-        </ul>
+        <div class="main-header__user-block">
+          <div class="login-block logout">
+            <a class="login-block--login" href="#">Войти</a>
+            <a class="login-block--logout" href="#">Выйти</a>
+          </div>
+          <a class="compare" href="#">Сравнить</a>
+          <a class="cart" href="#">Корзина</a>
+        </div>
         <p>
           Тел.: +7 (495) 495-95-95
         </p>
