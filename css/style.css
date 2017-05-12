@@ -2064,6 +2064,8 @@ header.header__catalog::before {
 }
 
 .promo .slide-two,
-.promo .slide-three {
+.promo .slide-three,
+.services__info .slide-three,
+.services__info .slide-two {
   display: none;
 }
