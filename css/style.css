@@ -2063,7 +2063,7 @@ header.header__catalog::before {
   visibility: visible;
 }
 
-.slide-two,
-.slide-three {
-  display: none !important;
+.promo .slide-two,
+.promo .slide-three {
+  display: none;
 }
