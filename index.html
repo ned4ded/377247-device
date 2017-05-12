@@ -272,6 +272,22 @@
         <a href="https://goo.gl/maps/mHJBAUXVdUn" target="_blank"><img class="info__map" src="img/map.jpg" alt="Карта с адресом" width="560" height="222"/></a>
         <a href="write-us-form.html" class="btn info__btn">Напишите нам</a>
       </div>
+      <form class="write-us-form" action="index.html" method="get">
+        <label>
+          Ваше имя:
+          <input class="write-us-form__input" type="text" name="name" value="" placeholder="Представьтесь, пожалуйста">
+        </label>
+        <label>
+          Ваш e-mail:
+          <input class="write-us-form__input" type="text" name="email" value="" placeholder="Для отправки ответа" required>
+        </label>
+        <label>
+          Текст письма:
+          <textarea class="write-us-form__input write-us-form__input-textarea" type="text" name="email-text" value="" placeholder="В свободной форме"></textarea>
+        </label>
+        <div class="btn filters__btn"><input class="btn" type="submit" name="submit-users-letter" value="Отправить"></div>
+        <a class="close-btn" href="index.html"></a>
+      </form>
     </div>
 
   </main>
