@@ -21,11 +21,11 @@
       </b>
       <div class="main-header__menu clearfix">
         <div class="main-header__toolbar">
-          <form class="" action="" method="get">
-            <label  class="main-header__search-bar">
+          <form action="index.html" method="get">
+            <div  class="main-header__search-bar">
               <input class="main-header__search-bar-input" type="search" name="site-search" value="" placeholder="Поиск по сайту">
               <input  class="main-header__search-bar-btn" type="submit" name="site-search" value="Найти"/>
-            </label>
+            </div>
           </form>
           <div class="main-header__user-block">
             <div class="login-block login">
@@ -41,11 +41,11 @@
           <li>
             <input type="radio" name="main-header__nav-catalog" id="main-header__nav-btn-1" />
             <input type="radio" name="main-header__nav-catalog" id="main-header__nav-btn-2" checked/>
-            <a class="main-header__nav-catalog">
+            <div class="main-header__nav-catalog">
               <label for="main-header__nav-btn-1"></label>
               <label for="main-header__nav-btn-2"></label>
               Каталог товаров
-            </a>
+            </div>
             <ul class="main-header__nav-submenu">
               <li>
                 <a href="#">Виртуальная реальность</a>
@@ -92,7 +92,11 @@
             Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.
           </p>
           <a class="btn promo__btn" href="#">Подробнее</a>
-          <div class="slider-pagination"></div>
+          <ul class="slider-pagination">
+            <li class="current"></li>
+            <li></li>
+            <li></li>
+          </ul>
           <table>
             <tbody class="promo__spec">
               <tr class="promo__spec-item">
@@ -272,6 +276,22 @@
         <a href="https://goo.gl/maps/mHJBAUXVdUn" target="_blank"><img class="info__map" src="img/map.jpg" alt="Карта с адресом" width="560" height="222"/></a>
         <a href="write-us-form.html" class="btn info__btn">Напишите нам</a>
       </div>
+      <form class="write-us-form" action="index.html" method="get">
+        <label>
+          Ваше имя:
+          <input class="write-us-form__input" type="text" name="name" value="" placeholder="Представьтесь, пожалуйста">
+        </label>
+        <label>
+          Ваш e-mail:
+          <input class="write-us-form__input" type="text" name="email" value="" placeholder="Для отправки ответа" required>
+        </label>
+        <label>
+          Текст письма:
+          <textarea class="write-us-form__input write-us-form__input-textarea" name="email-text" placeholder="В свободной форме"></textarea>
+        </label>
+        <div class="btn filters__btn"><input class="btn" type="submit" name="submit-users-letter" value="Отправить"></div>
+        <a class="close-btn" href="index.html"></a>
+      </form>
     </div>
 
   </main>
