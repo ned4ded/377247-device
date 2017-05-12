@@ -4,39 +4,49 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Девайс</title>
+  <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
   <!-- <link rel="stylesheet" href="css/markup-color-border.css"> -->
+  <!--<style>
+  body {background: rgb(0, 0, 0) url(img/device-index.jpg) no-repeat 50% 0;
+  background-size: auto;}
+</style>-->
 </head>
 
 <body>
   <header class="container clearfix">
     <div class="header main-header">
-
       <b class="logo main-header__logo">
         Device
       </b>
-      <h2 class="no-style-explanation-heading">Главное меню</h2> <!--Здесь и далее использованы h2 заголовки с классом "no-style-explanation-heading" для предания контенту сайта более структурированного вида, скрываются с помощью CSS -->
       <div class="main-header__menu clearfix">
         <div class="main-header__toolbar">
-          <form>
-            <input type="search" name="site-search" placeholder="Поиск по сайту">
+          <form class="" action="" method="get">
+            <label  class="main-header__search-bar">
+              <input class="main-header__search-bar-input" type="search" name="site-search" value="" placeholder="Поиск по сайту">
+              <input  class="main-header__search-bar-btn" type="submit" name="site-search" value="Найти"/>
+            </label>
           </form>
-          <ul class="main-header__user-block">
-            <li>
-              <a href="#">Войти</a>
-            </li>
-            <li>
-              <a href="#">Сравнить</a>
-            </li>
-            <li>
-              <a href="#">Корзина</a>
-            </li>
-          </ul>
+          <div class="main-header__user-block">
+            <div class="login-block login">
+              <a class="login-block--login" href="#">Войти</a>
+              <a class="login-block--logout" href="#">Валентин Петухов</a>
+              <a class="login-block--logout" href="#">Выйти</a>
+            </div>
+            <a class="compare" href="#">Сравнить</a>
+            <a class="cart" href="#">Корзина</a>
+          </div>
         </div>
         <ul class="main-header__nav">
           <li>
-            <a href="#">Каталог товаров</a>
-            <ul>
+            <input type="radio" name="main-header__nav-catalog" id="main-header__nav-btn-1" />
+            <input type="radio" name="main-header__nav-catalog" id="main-header__nav-btn-2" checked/>
+            <a class="main-header__nav-catalog">
+              <label for="main-header__nav-btn-1"></label>
+              <label for="main-header__nav-btn-2"></label>
+              Каталог товаров
+            </a>
+            <ul class="main-header__nav-submenu">
               <li>
                 <a href="#">Виртуальная реальность</a>
               </li>
@@ -72,42 +82,42 @@
   </header>
 
   <main class="container clearfix">
-
-    <h2 class="no-style-explanation-heading">Промо-товары</h2>
     <ul class="promo slider">
       <li class="slide-one">
         <div class="promo__img"><img src="img/promo-slider-img-1.png" alt="Самая длинная палка для селфи" width="384" height="486"></div>
         <div class="promo__info styling-block">
           <span class="promo__info-slid-number">01</span>
-          <p class="promo__slogan">Делай селфи, как Бен Стиллер!</p>
-          <p>
+          <p class="title">Делай селфи,<br /> как Бен Стиллер!</p>
+          <p class="descr">
             Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.
           </p>
           <a class="btn promo__btn" href="#">Подробнее</a>
           <div class="slider-pagination"></div>
           <table>
-            <tr class="promo__spec-item">
-              <td>
-                Длина палки
-              </td>
-              <td>
-                Вес палки
-              </td>
-              <td>
-                Материал
-              </td>
-            </tr>
-            <tr class="promo__spec-sgnfction">
-              <td>
-                8,5 м
-              </td>
-              <td>
-                5 кг
-              </td>
-              <td>
-                Карбон
-              </td>
-            </tr>
+            <tbody class="promo__spec">
+              <tr class="promo__spec-item">
+                <td>
+                  Длина палки
+                </td>
+                <td>
+                  Вес палки
+                </td>
+                <td>
+                  Материал
+                </td>
+              </tr>
+              <tr class="promo__spec-sgnfction">
+                <td>
+                  8,5 м
+                </td>
+                <td>
+                  5 кг
+                </td>
+                <td>
+                  Карбон
+                </td>
+              </tr>
+            </tbody>
           </table>
         </div>
       </li>
@@ -115,13 +125,14 @@
         <div class="promo__img"><img src="img/promo-slider-img-2.png" alt="Мотивирующие фитнес-браслеты" width="345" height="485"></div>
         <div class="promo__info styling-block">
           <span class="promo__info-slid-number">02</span>
-          <p class="promo__slogan">Худеем правильно!</p>
-          <p>
+          <p class="title">Худеем<br /> правильно!</p>
+          <p  class="descr">
             Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.
           </p>
           <a class="btn promo__btn" href="#">Подробнее</a>
           <div class="slider-pagination"></div>
           <table>
+            <tbody class="promo__spec">
             <tr class="promo__spec-item">
               <td>
                 Без подзарядки
@@ -132,6 +143,7 @@
                 48 часов
               </td>
             </tr>
+          </tbody>
           </table>
         </div>
       </li>
@@ -139,13 +151,14 @@
         <div class="promo__img"><img src="img/promo-slider-img-3.png" alt="Квадрокоптер с мощным лазером" width="526" height="334"></div>
         <div class="promo__info styling-block">
           <span class="promo__info-slid-number">03</span>
-          <p class="promo__slogan">Порхает как бабочка, жалит как пчела!</p>
-          <p>
+          <p class="title">Порхает как бабочка,<br /> жалит как пчела!</p>
+          <p class="descr">
             Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.
           </p>
           <a class="btn promo__btn" href="#">Подробнее</a>
           <div class="slider-pagination"></div>
           <table>
+            <tbody class="promo__spec">
             <tr class="promo__spec-item">
               <td>
                 Дальность полета
@@ -162,66 +175,60 @@
                 50 м
               </td>
             </tr>
+          </tbody>
           </table>
         </div>
       </li>
     </ul>
-
-    <h2 class="no-style-explanation-heading">Популярные товары</h2>
     <ul class="popular-goods">
       <li>
-        <a href="#"><span class="popular-goods__img popular-goods__img-virtual"> Виртуальная реальность</span></a>
+        <a class="popular-goods__img popular-goods__img-virtual" href="#"><span> Виртуальная реальность</span></a>
       </li>
       <li>
-        <a href="#"><span class="popular-goods__img popular-goods__img-monopod">Моноподы для селфи</span></a>
+        <a class="popular-goods__img popular-goods__img-monopod" href="#"><span>Моноподы для селфи</span></a>
       </li>
       <li>
-        <a href="#"><span class="popular-goods__img popular-goods__img-ac">Экшн-камеры</span></a>
+        <a class="popular-goods__img popular-goods__img-ac" href="#"><span>Экшн-камеры</span></a>
       </li>
       <li>
-        <a href="#"><span class="popular-goods__img popular-goods__img-fit-brac">Фитнес-браслеты</span></a>
+        <a class="popular-goods__img popular-goods__img-fit-brac" href="#"><span>Фитнес-браслеты</span></a>
       </li>
       <li>
-        <a href="#"><span  class="popular-goods__img popular-goods__img-smart-watch">Умные часы</span></a>
+        <a class="popular-goods__img popular-goods__img-smart-watch" href="#"><span>Умные часы</span></a>
       </li>
       <li>
-        <a href="#"><span  class="popular-goods__img popular-goods__img-quadro">Квадрокоптеры</span></a>
+        <a class="popular-goods__img popular-goods__img-quadro" href="#"><span>Квадрокоптеры</span></a>
       </li>
     </ul>
 
     <div class="services">
-      <h2 class="no-style-explanation-heading">Сервис</h2>
-
-      <h3 class="no-style-explanation-heading">Список предлагаемых сервисов</h3>
       <ul class="services__list-of-services">
-        <li class="btn services__btn services__btn--active">
-          Доставка
+        <li>
+          <a class="btn services__btn services__btn--active" href="#">Доставка</a>
         </li>
-        <li class="btn services__btn">
-          Гарантия
+        <li>
+          <a class="btn services__btn" href="#">Гарантия</a>
         </li>
-        <li class="btn services__btn">
-          Кредит
+        <li>
+          <a class="btn services__btn" href="#">Кредит</a>
         </li>
       </ul>
 
-      <h3 class="no-style-explanation-heading">Описание предлагаемых сервисов</h3>
       <ul class="services__info">
         <li class="slide-one services__img delivery-img">
-          <h4 class="services__info-title">Доставка</h4>
-          <p class="services__info-descr">
-            Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита. Выгодные для нашего банка, разумеется.
-          </p>
+          <h4 class="title">Доставка</h4>
+          <p class="descr">
+            Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.
         </li>
         <li class="slide-two services__img guarantee-img">
-          <h4 class="services__info-title">Гарантия</h4>
-          <p class="services__info-descr">
+          <h4 class="title">Гарантия</h4>
+          <p class="descr">
             Если из-за возгарания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый. Товар, не дом, конечно же.
           </p>
         </li>
         <li class="slide-three services__img bank-loan-img">
-          <h4 class="services__info-title">Кредит</h4>
-          <p class="services__info-descr">
+          <h4 class="title">Кредит</h4>
+          <p class="descr">
             Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита. Выгодные для нашего банка, разумеется.
           </p>
         </li>
@@ -229,7 +236,6 @@
     </div>
 
     <div class="partners">
-      <h2 class="no-style-explanation-heading">Партнеры</h2>
       <img src="img/partner-logo-1.jpg" alt="Лого-1" width="260" height="100"/>
       <img src="img/partner-logo-2.jpg" alt="Лого-2" width="260" height="100"/>
       <img src="img/partner-logo-3.jpg" alt="Лого-3" width="260" height="100"/>
@@ -263,31 +269,30 @@
         <p class="info__text-descr">
           Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.
         </p>
-        <img class="info__map" src="img/map.jpg" alt="Карта с адресом" width="560" height="222"/>
-        <a href="#" class="btn info__btn">Напишите нам</a>
+        <a href="https://goo.gl/maps/mHJBAUXVdUn" target="_blank"><img class="info__map" src="img/map.jpg" alt="Карта с адресом" width="560" height="222"/></a>
+        <a href="write-us-form.html" class="btn info__btn">Напишите нам</a>
       </div>
     </div>
 
   </main>
-  <footer>
-    <h2 class="no-style-explanation-heading">Ссылки</h2>
+  <footer class="footer-background">
     <div class="container footer clearfix">
       <div class="footer__left-column styling-block">
-        <b class="logo footer__logo">Device</b>
+        <a class="logo footer__logo" href="index.html">Device</a>
         <p>
           г. Москва, ул. Строителей, 15
         </p>
       </div>
       <div class="footer__center-column">
         <ul class="footer__list-of-services">
-          <li class="footer__delivery">
-            Доставка
+          <li>
+            <a href="#">Доставка</a>
           </li>
-          <li class="footer__guarantee">
-            Гарантия
+          <li>
+            <a href="#">Гарантия</a>
           </li>
-          <li class="footer__contact">
-            Контакты
+          <li>
+            <a href="#">Контакты</a>
           </li>
         </ul>
         <ul class="footer__social">
@@ -303,11 +308,14 @@
         </ul>
       </div>
       <div class="footer__right-column">
-        <ul class="tool-list footer__tool-list">
-          <li><a href="#">Войти</a></li>
-          <li><a href="#">Сравнить</a></li>
-          <li><a href="#">Корзина</a></li>
-        </ul>
+        <div class="main-header__user-block">
+          <div class="login-block login">
+            <a class="login-block--login" href="#">Войти</a>
+            <a class="login-block--logout" href="#">Выйти</a>
+          </div>
+          <a class="compare" href="#">Сравнить</a>
+          <a class="cart" href="#">Корзина</a>
+        </div>
         <p>
           Тел.: +7 (495) 495-95-95
         </p>
