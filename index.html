@@ -4,13 +4,9 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Девайс</title>
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/normalize-min.css">
+  <link rel="stylesheet" href="css/styles-min.css">
   <!-- <link rel="stylesheet" href="css/markup-color-border.css"> -->
-  <!--<style>
-  body {background: rgb(0, 0, 0) url(img/device-index.jpg) no-repeat 50% 0;
-  background-size: auto;}
-</style>-->
 </head>
 
 <body>
@@ -22,9 +18,9 @@
       <div class="main-header__menu clearfix">
         <div class="main-header__toolbar">
           <form action="index.html" method="get">
-            <div  class="main-header__search-bar">
+            <div class="main-header__search-bar">
               <input class="main-header__search-bar-input" type="search" name="site-search" value="" placeholder="Поиск по сайту">
-              <input  class="main-header__search-bar-btn" type="submit" name="site-search" value="Найти"/>
+              <input class="main-header__search-bar-btn" type="submit" name="site-search" value="Найти" />
             </div>
           </form>
           <div class="main-header__user-block">
@@ -44,7 +40,7 @@
             <div class="main-header__nav-catalog">
               <label for="main-header__nav-btn-1"></label>
               <label for="main-header__nav-btn-2"></label>
-              Каталог товаров
+              <a class="main-header__nav-title" href="catalog.html">Каталог товаров</a>
             </div>
             <ul class="main-header__nav-submenu">
               <li>
@@ -57,7 +53,7 @@
                 <a href="#">Квадрокоптеры</a>
               </li>
               <li>
-                <a href="#">Моноподы для селфи</a>
+                <a href="catalog.html">Моноподы для селфи</a>
               </li>
               <li>
                 <a href="#">Умные часы</a>
@@ -68,19 +64,18 @@
             </ul>
           </li>
           <li>
-            <a href="#">Доставка</a>
+            <a class="main-header__nav-title" href="#">Доставка</a>
           </li>
           <li>
-            <a href="#">Гарантия</a>
+            <a class="main-header__nav-title" href="#">Гарантия</a>
           </li>
           <li>
-            <a href="#">Контакты</a>
+            <a class="main-header__nav-title" href="#">Контакты</a>
           </li>
         </ul>
       </div>
     </div>
   </header>
-
   <main class="container clearfix">
     <ul class="promo slider">
       <li class="slide-one">
@@ -130,24 +125,24 @@
         <div class="promo__info styling-block">
           <span class="promo__info-slid-number">02</span>
           <p class="title">Худеем<br /> правильно!</p>
-          <p  class="descr">
+          <p class="descr">
             Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.
           </p>
           <a class="btn promo__btn" href="#">Подробнее</a>
           <div class="slider-pagination"></div>
           <table>
             <tbody class="promo__spec">
-            <tr class="promo__spec-item">
-              <td>
-                Без подзарядки
-              </td>
-            </tr>
-            <tr class="promo__spec-sgnfction">
-              <td>
-                48 часов
-              </td>
-            </tr>
-          </tbody>
+              <tr class="promo__spec-item">
+                <td>
+                  Без подзарядки
+                </td>
+              </tr>
+              <tr class="promo__spec-sgnfction">
+                <td>
+                  48 часов
+                </td>
+              </tr>
+            </tbody>
           </table>
         </div>
       </li>
@@ -163,23 +158,23 @@
           <div class="slider-pagination"></div>
           <table>
             <tbody class="promo__spec">
-            <tr class="promo__spec-item">
-              <td>
-                Дальность полета
-              </td>
-              <td>
-                Радиус поражения
-              </td>
-            </tr>
-            <tr class="promo__spec-sgnfction">
-              <td>
-                800 м
-              </td>
-              <td>
-                50 м
-              </td>
-            </tr>
-          </tbody>
+              <tr class="promo__spec-item">
+                <td>
+                  Дальность полета
+                </td>
+                <td>
+                  Радиус поражения
+                </td>
+              </tr>
+              <tr class="promo__spec-sgnfction">
+                <td>
+                  800 м
+                </td>
+                <td>
+                  50 м
+                </td>
+              </tr>
+            </tbody>
           </table>
         </div>
       </li>
@@ -189,7 +184,7 @@
         <a class="popular-goods__img popular-goods__img-virtual" href="#"><span> Виртуальная реальность</span></a>
       </li>
       <li>
-        <a class="popular-goods__img popular-goods__img-monopod" href="#"><span>Моноподы для селфи</span></a>
+        <a class="popular-goods__img popular-goods__img-monopod" href="catalog.html"><span>Моноподы для селфи</span></a>
       </li>
       <li>
         <a class="popular-goods__img popular-goods__img-ac" href="#"><span>Экшн-камеры</span></a>
@@ -204,7 +199,6 @@
         <a class="popular-goods__img popular-goods__img-quadro" href="#"><span>Квадрокоптеры</span></a>
       </li>
     </ul>
-
     <div class="services">
       <ul class="services__list-of-services">
         <li>
@@ -223,6 +217,7 @@
           <h4 class="title">Доставка</h4>
           <p class="descr">
             Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.
+          </p>
         </li>
         <li class="slide-two services__img guarantee-img">
           <h4 class="title">Гарантия</h4>
@@ -240,40 +235,40 @@
     </div>
 
     <div class="partners">
-      <img src="img/partner-logo-1.jpg" alt="Лого-1" width="260" height="100"/>
-      <img src="img/partner-logo-2.jpg" alt="Лого-2" width="260" height="100"/>
-      <img src="img/partner-logo-3.jpg" alt="Лого-3" width="260" height="100"/>
-      <img src="img/partner-logo-4.jpg" alt="Лого-4" width="260" height="100"/>
+      <img src="img/partner-logo-1.jpg" alt="Лого-1" width="260" height="100" />
+      <img src="img/partner-logo-2.jpg" alt="Лого-2" width="260" height="100" />
+      <img src="img/partner-logo-3.jpg" alt="Лого-3" width="260" height="100" />
+      <img src="img/partner-logo-4.jpg" alt="Лого-4" width="260" height="100" />
     </div>
 
     <div class="info">
       <div class="info__about-us styling-block">
         <h2 class="info__title title">О нас</h2>
-          <p class="info__text-descr">
-            Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.
-          </p>
-          <p class="info__text-descr">
-            Мы можем доставить ваш товар в самые отдаленные точки России! DEVICE работает со многими транспортными компаниями:
-          </p>
-          <ul class="info__list-of-trnsprt-cmpnies">
-            <li>
-              Деловые Линии
-            </li>
-            <li>
-              Автотрейдинг
-            </li>
-            <li>
-              ЖелДорЭкспедиция
-            </li>
-          </ul>
-          <a class="btn info__btn">Подробнее о нас</a>
+        <p class="info__text-descr">
+          Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.
+        </p>
+        <p class="info__text-descr">
+          Мы можем доставить ваш товар в самые отдаленные точки России! DEVICE работает со многими транспортными компаниями:
+        </p>
+        <ul class="info__list-of-trnsprt-cmpnies">
+          <li>
+            Деловые Линии
+          </li>
+          <li>
+            Автотрейдинг
+          </li>
+          <li>
+            ЖелДорЭкспедиция
+          </li>
+        </ul>
+        <a class="btn info__btn">Подробнее о нас</a>
       </div>
       <div class="info__contacts styling-block">
         <h2 class="info__title title">Контакты</h2>
         <p class="info__text-descr">
           Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.
         </p>
-        <a href="https://goo.gl/maps/mHJBAUXVdUn" target="_blank"><img class="info__map" src="img/map.jpg" alt="Карта с адресом" width="560" height="222"/></a>
+        <a href="https://goo.gl/maps/mHJBAUXVdUn" target="_blank"><img class="info__map" src="img/map.jpg" alt="Карта с адресом" width="560" height="222" /></a>
         <a href="write-us-form.html" class="btn info__btn">Напишите нам</a>
       </div>
       <form class="write-us-form" action="index.html" method="get">
@@ -295,6 +290,7 @@
     </div>
 
   </main>
+
   <footer class="footer-background">
     <div class="container footer clearfix">
       <div class="footer__left-column styling-block">
@@ -328,7 +324,7 @@
         </ul>
       </div>
       <div class="footer__right-column">
-        <div class="main-header__user-block">
+        <div class="main-header__user-block footer__user-block">
           <div class="login-block login">
             <a class="login-block--login" href="#">Войти</a>
             <a class="login-block--logout" href="#">Выйти</a>
