@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <title>HTML Academy: Девайс</title>
   <link rel="stylesheet" href="css/normalize-min.css">
-  <link rel="stylesheet" href="css/styles-min.css">
+  <link rel="stylesheet" href="css/style.css">
   <!-- <link rel="stylesheet" href="css/markup-color-border.css"> -->
 </head>
 
@@ -76,8 +76,9 @@
       </div>
     </div>
   </header>
-  <main class="container clearfix">
-    <ul class="promo slider">
+  <main>
+    <div class="container clearfix">
+      <ul class="promo slider">
       <li class="slide-one">
         <div class="promo__img"><img src="img/promo-slider-img-1.png" alt="Самая длинная палка для селфи" width="384" height="486"></div>
         <div class="promo__info styling-block">
@@ -179,7 +180,7 @@
         </div>
       </li>
     </ul>
-    <ul class="popular-goods">
+      <ul class="popular-goods">
       <li>
         <a class="popular-goods__img popular-goods__img-virtual" href="#"><span> Виртуальная реальность</span></a>
       </li>
@@ -199,8 +200,10 @@
         <a class="popular-goods__img popular-goods__img-quadro" href="#"><span>Квадрокоптеры</span></a>
       </li>
     </ul>
-    <div class="services">
-      <ul class="services__list-of-services">
+    </div>
+    <div class="special-background-markup">
+      <div class="services container">
+        <ul class="services__list-of-services">
         <li>
           <a class="btn services__btn services__btn--active" href="#">Доставка</a>
         </li>
@@ -211,8 +214,7 @@
           <a class="btn services__btn" href="#">Кредит</a>
         </li>
       </ul>
-
-      <ul class="services__info">
+        <ul class="services__info">
         <li class="slide-one services__img delivery-img">
           <h4 class="title">Доставка</h4>
           <p class="descr">
@@ -232,16 +234,16 @@
           </p>
         </li>
       </ul>
+      </div>
     </div>
-
-    <div class="partners">
+    <div class="container clearfix">
+      <div class="partners">
       <img src="img/partner-logo-1.jpg" alt="Лого-1" width="260" height="100" />
       <img src="img/partner-logo-2.jpg" alt="Лого-2" width="260" height="100" />
       <img src="img/partner-logo-3.jpg" alt="Лого-3" width="260" height="100" />
       <img src="img/partner-logo-4.jpg" alt="Лого-4" width="260" height="100" />
     </div>
-
-    <div class="info">
+      <div class="info">
       <div class="info__about-us styling-block">
         <h2 class="info__title title">О нас</h2>
         <p class="info__text-descr">
@@ -288,7 +290,7 @@
         <a class="close-btn" href="index.html"></a>
       </form>
     </div>
-
+    </div>
   </main>
 
   <footer class="footer-background">
