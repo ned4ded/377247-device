@@ -1034,6 +1034,7 @@ input[id="main-header__nav-btn-2"]:checked ~ ul {
 .promo__spec tr {
   height: 16px;
   padding: 0;
+  font-size: 13px;
 
   font-family: "Open Sans", "Arial", sans-serif;
 }
