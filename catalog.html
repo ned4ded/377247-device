@@ -24,7 +24,7 @@
             </div>
           </form>
           <div class="main-header__user-block">
-            <div class="login-block login">
+            <div class="login-block logout">
               <a class="login-block--login" href="#">Войти</a>
               <a class="login-block--logout" href="#">Валентин Петухов</a>
               <a class="login-block--logout" href="#">Выйти</a>
@@ -78,27 +78,57 @@
     </div>
   </header>
 
-  <main class="catalog__background">
-    <div class="container clearfix container__catalog">
-      <!-- this container is for markuping the background -->
-      <div class="page-heading">
-        <h1 class="page-heading__title title">Моноподы для селфи</h1>
-        <ul class="page-heading__breadcrumbs clearfix">
-          <li>
-            <a href="index.html">Главная</a>
-          </li>
-          <li>
-            <a href="#">Каталог товаров</a>
-          </li>
-          <li>
-            <a class="page-heading__current-page" href="#">Моноподы для селфи</a>
-          </li>
-        </ul>
-      </div>
-      <form class="filters">
-        <p class="legend-heading">
+  <main>
+    <div class="page-heading container clearfix">
+      <h1 class="page-heading__title title">Моноподы для селфи</h1>
+      <ul class="page-heading__breadcrumbs clearfix">
+        <li>
+          <a href="index.html">Главная</a>
+        </li>
+        <li>
+          <a href="#">Каталог товаров</a>
+        </li>
+        <li>
+          <a class="page-heading__current-page" href="#">Моноподы для селфи</a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="special-background-markup">
+      <div class="container catalog-content-heading">
+        <p class="legend-heading legend-heading__filters">
           Фильтр:
         </p>
+        <p class="legend-heading legend-heading__sort">
+          Сортировка:
+        </p>
+        <div class="shop-items__sort">
+          <ul class="shop-items__sort-type">
+            <li>
+              <a class="checked" href="#">По цене</a>
+            </li>
+            <li>
+              <a href="#">По типу</a>
+            </li>
+            <li>
+              <a href="#">По популярности</a>
+            </li>
+          </ul>
+          <ul class="shop-items__order-type">
+            <li>
+              <a href="#" class="shop-items__order-type-asc">По возрастанию</a>
+            </li>
+            <li>
+              <a class="shop-items__order-type-desc checked" href="#">По убыванию</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="special-background-markup">
+      <div class="container catalog__background clearfix">
+      <form class="filters">
         <fieldset class="filters__price">
           <legend class="legend-sub-heading">
             Стоимость
@@ -112,11 +142,11 @@
           </div>
           <div class="filters__price-controls">
             <label class="min-price">
-            от <input type="text" name="min-price" value="0">
-          </label>
+              от <input type="text" name="min-price" value="0">
+            </label>
             <label class="max-price">
-            до <input type="text" name="max-price" value="5000">
-          </label>
+              до <input type="text" name="max-price" value="5000">
+            </label>
           </div>
         </fieldset>
         <fieldset class="filters__color">
@@ -167,30 +197,6 @@
         </div>
       </form>
       <section class="shop-items">
-        <div class="shop-items__sort">
-          <p class="legend-heading">
-            Сортировка:
-          </p>
-          <ul class="shop-items__sort-type">
-            <li>
-              <a class="checked" href="#">По цене</a>
-            </li>
-            <li>
-              <a href="#">По типу</a>
-            </li>
-            <li>
-              <a href="#">По популярности</a>
-            </li>
-          </ul>
-          <ul class="shop-items__order-type">
-            <li>
-              <a href="#" class="shop-items__order-type-asc">По возрастанию</a>
-            </li>
-            <li>
-              <a class="shop-items__order-type-desc checked" href="#">По убыванию</a>
-            </li>
-          </ul>
-        </div>
         <article>
           <div class="shop-items__img">
             <img src="img/shop-item-1.jpg" alt="Любительская селфи-палка" width="360" height="380">
@@ -239,6 +245,7 @@
           <li><a class="shop-items__pagination-text" href="#">Вперед</a></li>
         </ul>
       </section>
+    </div>
     </div>
   </main>
 
