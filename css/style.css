@@ -1396,6 +1396,7 @@ input[id="main-header__nav-btn-2"]:checked ~ ul {
 }
 
 .info__map {
+  display: block;
   margin-bottom: 67px;
 }
 
