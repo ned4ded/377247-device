@@ -498,9 +498,9 @@ header.container::before {
   -ms-flex-line-pack: start;
       align-content: flex-start;
   width: 1080px;
-  min-height: 129px;
+  /*min-height: 129px;*/
   /*margin-top: -10px;*/
-  padding: 39px 60px 0 20px;
+  padding: 39px 60px 21px 20px;
 
   background-color: rgb(247, 226, 150);
 }
