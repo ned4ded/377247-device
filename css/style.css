@@ -146,6 +146,8 @@ header.container::before {
 
   color: black;
   text-decoration: none;
+
+  cursor: pointer;
 }
 
 .catalog-header__logo {
@@ -607,11 +609,14 @@ input[id="main-header__nav-btn-2"]:checked ~ ul {
   content: "";
   position: absolute;
   top: 16px;
+  bottom: 16px;
   z-index: -1;
 
   display: block;
   width: 220px;
-  height: 8px;
+  /*height: 8px;*/
+
+  transition: 0.1s ease top, 0.1s ease bottom;
 
   background-color: rgb(240, 197, 46);
 }
@@ -619,8 +624,8 @@ input[id="main-header__nav-btn-2"]:checked ~ ul {
 .btn:hover::before,
 .btn:active::before {
   top: 0;
+  bottom: 0;
 
-  height: 40px;
 }
 
 .btn:active {
@@ -891,12 +896,6 @@ input[id="main-header__nav-btn-2"]:checked ~ ul {
   padding: 0;
 }
 
-.promo li {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
 .promo table {
   margin-top: 140px;
   margin-left: -4px;
@@ -947,6 +946,12 @@ input[id="main-header__nav-btn-2"]:checked ~ ul {
   line-height: 56px;
 }
 
+.slide-three .title {
+  font-size: 45px;
+  position: relative;
+  z-index: 2;
+}
+
 .promo__info .descrip {
   margin-top: 0;
   margin-bottom: 43px;
@@ -977,35 +982,38 @@ input[id="main-header__nav-btn-2"]:checked ~ ul {
 }
 
 .slider-pagination {
-  display: block;
   float: right;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   width: 100px;
   height: 20px;
   margin: 0;
-  margin-right: -20px;
+  margin-top: 18px;
   padding: 0;
-  padding-top: 15px;
 
   list-style: none;
 }
 
-.slider-pagination li {
-  float: left;
+.slider-pagination__item {
+  display: block;
   width: 4px;
   height: 4px;
-  margin-right: 23px;
+  cursor: pointer;
 
   border: 3px solid rgba(0, 0, 0, 0.3);
   border-radius: 50%;
 }
 
-.slider-pagination li:hover {
+.slider-pagination__item:hover {
   border: 3px solid rgba(0, 0, 0, 0.4);
 }
 
 .slider-pagination .current,
 .slider-pagination .current:hover,
-.slider-pagination li:active {
+.slider-pagination__item:active {
   border-color: rgba(0, 0, 0, 1);
 }
 
@@ -1218,14 +1226,29 @@ input[id="main-header__nav-btn-2"]:checked ~ ul {
   color: rgb(247, 225, 132);
 }
 
-.services .services__btn--active::before,
-.services .services__btn:active::before {
+.services .services__btn:active {
+  background: black;
+}
+
+@keyframes services-btn-anim {
+  0% {
+    width: 160px;
+  }
+
+  100% {
+    width: 277px;
+  }
+}
+
+.services .services__btn--active::before {
   top: 0;
+  bottom: 0;
 
   width: 277px;
-  height: 40px;
 
   background: black;
+
+  animation: services-btn-anim 0.3s ease;
 }
 
 .services__list-of-services li {
@@ -2046,6 +2069,9 @@ ul.shop-items__order-type {
   z-index: 1;
 
   visibility: hidden;
+  opacity: 0;
+
+  transition: .2s ease opacity;
 }
 
 .shop-items__img .btn {
@@ -2057,10 +2083,8 @@ ul.shop-items__order-type {
   top: 230px;
   left: 108px;
 
-  color: black;
+  color: rgba(0, 0, 0, 0.5);
   text-decoration: none;
-
-  opacity: 0.5;
 }
 
 .shop-items__img::after {
@@ -2073,6 +2097,8 @@ ul.shop-items__order-type {
   height: 100%;
 
   cursor: pointer;
+
+  transition: .2s ease background-color;
 }
 
 .shop-items__img:hover::after {
@@ -2083,14 +2109,16 @@ ul.shop-items__order-type {
 
 .shop-items__img:hover a {
   visibility: visible;
-}
 
-.shop-items__compare-btn:hover {
   opacity: 1;
 }
 
+.shop-items__compare-btn:hover {
+  color: rgba(0, 0, 0, 1);
+}
+
 .shop-items__compare-btn:active {
-  opacity: 0.2;
+  color: rgba(0, 0, 0, 0.2);
 }
 
 .shop-items__goods-name {
@@ -2339,16 +2367,26 @@ article:nth-child(2) > .shop-items__goods-name {
   opacity: 0.3;
 }
 
-.slide-one {
-  visibility: visible;
-}
-
-.promo .slide-two,
-.promo .slide-three,
-.services__info .slide-three,
-.services__info .slide-two {
+.slide-one,
+.slide-two,
+.slide-three {
   display: none;
 }
+
+#slider-1:checked ~ .slide-one,
+#slider-2:checked ~ .slide-two,
+#slider-3:checked ~ .slide-three {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+#slider-4:checked ~ .slide-one,
+#slider-5:checked ~ .slide-two,
+#slider-6:checked ~ .slide-three {
+  display: block;
+}
+
 
 .info .info__map-popup {
   position: fixed;

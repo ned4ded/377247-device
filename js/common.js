@@ -50,3 +50,16 @@ window.addEventListener("keydown", function(event) {
     }
   }
 });
+
+const serviceBtns = document.querySelectorAll('.services__btn');
+
+serviceBtns.forEach((elem) => {
+  elem.addEventListener('click', () => {
+    if(elem.className === 'services__btn--active') {
+      return;
+    } else {
+      document.querySelector('.services__btn--active').classList.remove('services__btn--active');
+      elem.classList.add('services__btn--active');
+    }
+  });
+});

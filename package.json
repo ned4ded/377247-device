@@ -1,0 +1,23 @@
+{
+  "name": "377247-device",
+  "version": "1.0.0",
+  "description": "asdasdasd# Личный проект «Девайс»",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ned4ded/377247-device.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ned4ded/377247-device/issues"
+  },
+  "homepage": "https://github.com/ned4ded/377247-device#readme",
+  "dependencies": {
+    "browser-sync": "^2.18.13",
+    "gulp": "^3.9.1"
+  }
+}

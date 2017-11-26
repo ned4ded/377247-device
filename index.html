@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <title>HTML Academy: Девайс</title>
   <link rel="stylesheet" href="css/normalize.min.css">
-  <link rel="stylesheet" href="css/style.min.css">
+  <link rel="stylesheet" href="css/style.css">
   <!-- <link rel="stylesheet" href="css/markup-color-border.css"> -->
 </head>
 
@@ -92,6 +92,9 @@
   <main>
     <div class="container clearfix">
       <ul class="promo slider">
+        <input name="promo-slider-input" type="radio" id="slider-1" hidden checked>
+        <input name="promo-slider-input" type="radio" id="slider-2" hidden>
+        <input name="promo-slider-input" type="radio" id="slider-3" hidden>
         <li class="slide-one">
           <div class="promo__img"><img src="img/promo-slider-img-1.png" alt="Самая длинная палка для селфи" width="384" height="486"></div>
           <div class="promo__info styling-block">
@@ -102,9 +105,9 @@
             </p>
             <a class="btn promo__btn" href="#">Подробнее</a>
             <ul class="slider-pagination">
-              <li class="current"></li>
-              <li></li>
-              <li></li>
+              <li><label class="slider-pagination__item current" for="slider-1"></label></li>
+              <li><label class="slider-pagination__item" for="slider-2"></label></li>
+              <li><label class="slider-pagination__item" for="slider-3"></label></li>
             </ul>
             <table>
               <tbody class="promo__spec">
@@ -143,7 +146,11 @@
               Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.
             </p>
             <a class="btn promo__btn" href="#">Подробнее</a>
-            <div class="slider-pagination"></div>
+            <ul class="slider-pagination">
+              <li><label class="slider-pagination__item" for="slider-1"></label></li>
+              <li><label class="slider-pagination__item current" for="slider-2"></label></li>
+              <li><label class="slider-pagination__item" for="slider-3"></label></li>
+            </ul>
             <table>
               <tbody class="promo__spec">
                 <tr class="promo__spec-item">
@@ -169,7 +176,11 @@
               Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.
             </p>
             <a class="btn promo__btn" href="#">Подробнее</a>
-            <div class="slider-pagination"></div>
+            <ul class="slider-pagination">
+              <li><label class="slider-pagination__item" for="slider-1"></label></li>
+              <li><label class="slider-pagination__item" for="slider-2"></label></li>
+              <li><label class="slider-pagination__item current" for="slider-3"></label></li>
+            </ul>
             <table>
               <tbody class="promo__spec">
                 <tr class="promo__spec-item">
@@ -218,16 +229,19 @@
       <div class="services container">
         <ul class="services__list-of-services">
           <li>
-            <a class="btn services__btn services__btn--active" href="#">Доставка</a>
+            <label for="slider-4" class="btn services__btn services__btn--active">Доставка</label>
           </li>
           <li>
-            <a class="btn services__btn" href="#">Гарантия</a>
+            <label for="slider-5" class="btn services__btn">Гарантия</label>
           </li>
           <li>
-            <a class="btn services__btn" href="#">Кредит</a>
+            <label for="slider-6" class="btn services__btn">Кредит</label>
           </li>
         </ul>
         <ul class="services__info">
+          <input name="services-slider-input" type="radio" id="slider-4" hidden checked>
+          <input name="services-slider-input" type="radio" id="slider-5" hidden>
+          <input name="services-slider-input" type="radio" id="slider-6" hidden>
           <li class="slide-one services__img delivery-img">
             <h4 class="title">Доставка</h4>
             <p class="descrip">
@@ -360,7 +374,7 @@
     </div>
 
   </footer>
-  <script src="js/common.min.js"></script>
+  <script src="js/common.js"></script>
 </body>
 
 </html>
